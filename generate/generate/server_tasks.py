@@ -264,7 +264,7 @@ def gradle_build(build, new_working_dir, scheme):
         build.log.debug('changing dir to perform gradle build: %s, was in %s' % (new_working_dir, original_dir))
         os.chdir(new_working_dir)
 
-        gradle_home = '/mnt/gradle/gradle-6.5.1'
+        gradle_home = '/mnt/gradle/gradle-6.7.1'
         gradle_cmd = '%s/bin/gradle' % gradle_home
 
         env = copy(os.environ)

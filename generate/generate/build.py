@@ -265,7 +265,7 @@ class Build(object):
         self.log = log if log is not None else logging.getLogger(__name__)
 
         if config is not None and "android_sdk_root" in config:
-            config["android_sdk_dir"] = os.path.join(config['android_sdk_root'], 'api-30')
+            config["android_sdk_dir"] = os.path.join(config['android_sdk_root'], 'api-31')
             config.pop("android_sdk_root")
         self.config = config
         self.source_dir = path.abspath(source_dir)
@@ -286,7 +286,7 @@ class Build(object):
         self.override_modules = override_modules
         self.is_remote = is_remote
         if system_config is not None and "android_sdk_root" in system_config:
-            system_config["android_sdk_dir"] = os.path.join(system_config['android_sdk_root'], 'api-30')
+            system_config["android_sdk_dir"] = os.path.join(system_config['android_sdk_root'], 'api-31')
             system_config.pop("android_sdk_root")
         self.system_config = system_config
         self.meta_config = meta_config

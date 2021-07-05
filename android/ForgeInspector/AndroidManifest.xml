@@ -25,6 +25,7 @@
                   android:configChanges="mcc|mnc|locale|touchscreen|keyboardHidden|navigation|orientation|screenLayout|uiMode|fontScale|screenSize"
                   android:launchMode="singleTask"
                   android:stateNotNeeded="true"
+                  android:exported="true"
                   android:theme="@android:style/Theme.Black.NoTitleBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

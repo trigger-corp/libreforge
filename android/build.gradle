@@ -1,10 +1,11 @@
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven {
             url "https://maven.google.com"
         }
+        jcenter() // deprecated: https://blog.gradle.org/jcenter-shutdown
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.0"
@@ -16,7 +17,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         maven {
             url "https://maven.google.com"
         }
@@ -26,6 +27,7 @@ allprojects {
         maven {
             url "https://jitpack.io"
         }
+        jcenter() // deprecated: https://blog.gradle.org/jcenter-shutdown
         flatDir {
             dirs "ForgeModule/libs"
         }

@@ -21,7 +21,8 @@ class AndroidSdkError(lib.BASE_EXCEPTION):
 
 android_sdk_packages = [
     "platform-tools",     # adb
-    "build-tools;30.0.2", # aapt, android, apksigner, emulator, zipalign
+    "build-tools;30.0.3", # aapt, android, apksigner, emulator, zipalign
+    # TODO "build-tools;31.0.0-rc5", # aapt, android, apksigner, emulator, zipalign
 ]
 
 android_emulator_packages = [

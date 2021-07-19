@@ -331,7 +331,7 @@ def include_config(debug=False):
                 "content": "${config}"
             }}},
             {'when': {'platform_is': 'android'}, 'do': {'write_config': {
-                "filename": 'development/android_bundle/base/assets/app_config.js',
+                "filename": 'development/android_bundle/base/assets/forge/app_config.js',
                 "mapping_file": 'development/android/assets/module_mapping.json',
                 "content": "window.forge = {}; window.forge.config = ${config}; window.forge.module_mapping = ${module_mapping}; window.forge.config.development = false;"
             }}},

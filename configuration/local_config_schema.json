@@ -126,11 +126,12 @@
                         "com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro",
                         "com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro-Max",
                         "com.apple.CoreSimulator.SimDeviceType.iPhone-SE--2nd-generation-",
-
                         "com.apple.CoreSimulator.SimDeviceType.iPhone-12-mini",
                         "com.apple.CoreSimulator.SimDeviceType.iPhone-12",
                         "com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro",
                         "com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max",
+
+                        "com.apple.CoreSimulator.SimDeviceType.iPod-touch--7th-generation-",
 
                         "com.apple.CoreSimulator.SimDeviceType.iPad-2",
                         "com.apple.CoreSimulator.SimDeviceType.iPad-Retina",
@@ -152,9 +153,11 @@
                         "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---4th-generation-",
                         "com.apple.CoreSimulator.SimDeviceType.iPad-mini--5th-generation-",
                         "com.apple.CoreSimulator.SimDeviceType.iPad-Air--3rd-generation-",
-
                         "com.apple.CoreSimulator.SimDeviceType.iPad--8th-generation-",
-                        "com.apple.CoreSimulator.SimDeviceType.iPad-Air--4th-generation-"
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Air--4th-generation-",
+
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-11-inch-3rd-generation",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro-12-9-inch-5th-generation"
                     ],
                     "_order": 5
                 },

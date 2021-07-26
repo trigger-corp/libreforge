@@ -378,13 +378,20 @@ def _build_aab(java, bundletool, base_zip, output):
     run_shell(*command)
 
 def _sign_aab(jarsigner, signing_info, filename):
+    if signing_info['android.dontsign']:
+        LOG.info("signing disabled for android app bundle, skipping")
+        return
+    sigalg = signing_info['android.profile.sigalg'] or "SHA256withRSA"
+    digestalg = signing_info['android.profile.digestalg'] or "SHA-256"
+    LOG.info("using signature algorithm: %s", sigalg)
+    LOG.info("using digest algorithm: %s", digestalg)
     command = [
         jarsigner,
         "-keystore",     signing_info['android.profile.keystore'],
         "-storepass",    signing_info['android.profile.storepass'],
         "-keypass",      signing_info['android.profile.keypass'],
-        "-sigalg",       "SHA256withRSA",
-        "-digestalg",    "SHA-256",
+        "-sigalg",       sigalg,
+        "-digestalg",    digestalg,
         filename,        signing_info['android.profile.keyalias'],
     ]
     run_shell(*command)
@@ -734,13 +741,12 @@ def bundle_android(build):
         _build_aab(java, bundletool, base_zip, output)
 
         # 3. sign android app bundle file
-        LOG.info("signing android app bundle file")
+        LOG.info("Signing android app bundle file")
         _sign_aab(jarsigner, signing_info, output)
 
         # 4. validate android app bundle file
         LOG.info("Validating android app bundle file")
         _validate_aab(java, bundletool, output)
 
-        LOG.info("created AAB: {output}".format(output=output))
-
+        LOG.info("Created AAB: {output}".format(output=output))
         return output

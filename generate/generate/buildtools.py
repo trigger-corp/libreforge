@@ -237,18 +237,21 @@ def zip_local_assets(log, target, config, build_usercode, build_userassets, dest
 
     assets = {}
 
+    if target == "android" and config.get("modules", {}).get("parse", {}).get("config", {}).get("android", {}).get("googleServicesJson", {}):
+        services = {
+            "googleServicesJson": config["modules"]["parse"]["config"]["android"]["googleServicesJson"]
+        }
+        assets.update(services)
+        LOG.info("zip_local_assets parse -> %s" % assets)
+
     if target == "ios" and config.get("modules", {}).get("icons", {}).get("config", {}).get("ios", {}):
         icons = copy(config["modules"]["icons"]["config"]["ios"])
         if "prerendered" in icons:
             del icons["prerendered"]
-        assets = dict(assets, **icons)
+        assets.update(icons)
 
-    elif target == "android" and config.get("modules", {}).get("parse", {}).get("config", {}).get("android", {}).get("googleServicesJson", {}):
-        assets = {
-            "googleServicesJson": config["modules"]["parse"]["config"]["android"]["googleServicesJson"]
-        }
-
-    else:
+    # return None if there are no assets
+    if not assets:
         return None
 
     # zip assets & either upload to s3 or copy to build directory

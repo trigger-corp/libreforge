@@ -432,6 +432,14 @@ def run_module_build_steps(build):
             }
         }},
 
+        {'when': {'platform_is': 'android'}, 'do': {
+            'run_module_build_steps': {
+                'steps_path': 'development/android/build_steps',
+                'src_path': 'development/android_bundle/base/assets/src',
+                'project_path': 'development/android_bundle/base'
+            }
+        }},
+
         {'when': {'platform_is': 'ios'}, 'do': {
             'run_module_build_steps': {
                 'steps_path': 'development/ios/build_steps',

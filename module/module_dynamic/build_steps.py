@@ -409,7 +409,7 @@ def ios_populate_iconset(build_params, filename, icon):
     copy(source, dest)
 
 
-# - ditto for Google and others -----------------------------------------------------------------------
+# - ditto for Google services  ------------------------------------------------------------------------
 
 def populate_file_from_assets(build_params, filename, dest):
     if isinstance(filename, str) or isinstance(filename, unicode):

@@ -20,7 +20,7 @@ from lib import task
 import minify
 import module_dynamic.build as module_dynamic_build
 
-xcode_version="/opt/xcode/13.0b3/Xcode-beta.app"
+xcode_version="/opt/xcode/13.0/Xcode-beta.app"
 
 _platform_dir_map = {
     'android': 'development/android',

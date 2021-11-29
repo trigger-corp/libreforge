@@ -323,8 +323,11 @@ def _launch_avd(build, sdk):
         raise AndroidError(NEW_AVD_TEMPLATE)
 
 def _sign_zipf(lib_path, java, keystore, storepass, keyalias, keypass, signed_zipf_name, zipf_name):
+    apksigner_jar = path.join(lib_path, "apksigner.jar")
+    if not os.path.exists(apksigner_jar):
+        apksigner_jar = path.join(lib_path, "noarch.android.build-tools.29.0.3", "apksigner.jar")
     command = [
-        java, "-jar", path.join(lib_path, "apksigner.jar"), "sign",
+        java, "-jar", apksigner_jar, "sign",
         "--ks",           keystore,
         "--ks-pass",      "pass:%s" % storepass,
         "--ks-key-alias", keyalias,
@@ -451,6 +454,12 @@ def _create_apk(build, java, sdk, target, output_filename, interactive=True):
     """
 
     lib_path = path.normpath(path.join('.template', 'lib'))
+    LOG.error("LIB PATH: %s: " % lib_path)
+    if not path.isdir(lib_path):
+        lib_path = lib.expand_relative_path(
+            build, path.join('generate', 'lib')
+        )
+    LOG.error("LIB PATH is now: %s: " % lib_path)
     dev_dir = path.normpath(path.join('development', target))
 
     LOG.info('Creating Android .apk file')

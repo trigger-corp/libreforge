@@ -1,0 +1,470 @@
+{
+    "description": "Schema for locally set configuration",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+        "general": {
+            "required": false,
+            "type": "object",
+            "title": "General",
+            "additionalProperties": false,
+            "properties": {
+                "reload": {
+                    "required": false,
+                    "type": "object",
+                    "additionalProperties": false,
+                    "title": "Reload",
+                    "description": "Settings related to reload functionality.",
+                    "properties": {
+                        "external": {
+                            "type": "boolean",
+                            "required": false,
+                            "title": "External",
+                            "description": "Use an external content delivery network to serve reload updates."
+                        }
+                    }
+                },
+                "live": {
+                    "required": false,
+                    "type": "object",
+                    "additionalProperties": false,
+                    "title": "Live",
+                    "description": "Settings related to Forge Live functionality.",
+                    "properties": {
+                        "address": {
+                            "type": "string",
+                            "blank": false,
+                            "required": false,
+                            "title": "Live network address",
+                            "description": "Network address to use for Live server if you have multiple network interfaces.",
+                            "_order": 1
+                        },
+                        "port": {
+                            "type": "string",
+                            "blank": false,
+                            "required": false,
+                            "title": "Live network port",
+                            "description": "Specify an alternate port to use for the Live server.",
+                            "_order": 2
+                        },
+                        "node_path": {
+                            "type": "string",
+                            "blank": false,
+                            "required": false,
+                            "_dirpicker": true,
+                            "title": "Node Path",
+                            "description": "The path to your node installation",
+                            "_order": 3
+                        }
+                    }
+                }
+            },
+            "_order": 2
+        },
+
+        "ios": {
+            "required": false,
+            "type": "object",
+            "additionalProperties": false,
+            "title": "iOS",
+            "properties": {
+                "device": {
+                    "type": "string",
+                    "blank": false,
+                    "required": false,
+                    "title": "Device",
+                    "description": "Either 'simulator', 'device' or a specific device ID.",
+                    "_order": 1
+                },
+                "simulatorsdk": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Simulator Version",
+                    "description": "(deprecated) Use devicetypeid instead.",
+                    "enum": ["8.1", "8.0", "7.1", "7.0", "6.1", "6.0", "5.1", "5.0"],
+                    "_order": 2
+                },
+                "simulatorfamily": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Simulator Family",
+                    "description": "(deprecated) Use devicetypeid instead.",
+                    "enum": ["iphone", "ipad"],
+                    "_order": 3
+                },
+                "simulatorvariant": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Simulator Variant",
+                    "description": "(deprecated) Use devicetypeid instead.",
+                    "enum": ["default", "retina", "tall", "64bit"],
+                    "_order": 4
+                },
+                "devicetypeid": {
+                    "type": "string",
+                    "required": false,
+                    "title": "Device Type ID",
+                    "description": "If launching using the iOS simulator this allows you to set the id of the device type that should be simulated.",
+                    "enum": [
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-4s",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-5",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-5s",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-6-Plus",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-6",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-6s",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-6s-Plus",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-SE",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-7",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-7-Plus",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-8",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-8-Plus",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-X",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-XS",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-XS-Max",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-XR",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-11",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-11-Pro-Max",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-SE--2nd-generation-",
+
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-12-mini",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-12",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro",
+                        "com.apple.CoreSimulator.SimDeviceType.iPhone-12-Pro-Max",
+
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-2",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Retina",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Air",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-mini-2",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-mini-3",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-mini-4",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Air-2",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--9-7-inch-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad--5th-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---2nd-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--10-5-inch-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad--6th-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad--7th-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--11-inch-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---3rd-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--11-inch---2nd-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Pro--12-9-inch---4th-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-mini--5th-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Air--3rd-generation-",
+
+                        "com.apple.CoreSimulator.SimDeviceType.iPad--8th-generation-",
+                        "com.apple.CoreSimulator.SimDeviceType.iPad-Air--4th-generation-"
+                    ],
+                    "_order": 5
+                },
+                "devicesdk": {
+                    "type": "string",
+                    "blank": false,
+                    "required": false,
+                    "title": "Device SDK",
+                    "description": "Allows you to set the device SDK you want to work with. e.g. 'iOS 12.0'",
+                    "_order": 1
+                },
+                "profiles": {
+                    "required": true,
+                    "type": "object",
+                    "properties": {
+                        "DEFAULT": {
+                            "_comment": "Fixed default profile to hold us over until we allow dynamic add/remove of profiles",
+                            "type": "object",
+                            "required": true,
+                            "properties": {
+                                "provisioning_profile": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "_filepicker": true,
+                                    "title": "Provisioning Profile",
+                                    "description": "Path to the location of the provisioning profile to embed into your iOS application. This is necessary to be able to install the app on devices.",
+                                    "_order": 1
+                                },
+                                "developer_certificate": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "title": "Certificate",
+                                    "description": "<i>OS X Only.</i> Name of the certificate to use to sign your iOS app with. See our docs for more details on how to manage certificates.",
+                                    "_order": 2
+                                },
+                                "developer_certificate_path": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "_filepicker": true,
+                                    "title": "Certificate Path",
+                                    "description": "<i>Not required for OS X.</i> Path to p12 or pfx certificate file, see our docs for more details on how to manage certificates.",
+                                    "_order": 3
+                                },
+                                "developer_certificate_password": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "_password": true,
+                                    "title": "Certificate Password",
+                                    "description": "<i>Not required for OS X.</i> Password for above certificate file.",
+                                    "_order": 4
+                                }
+                            }
+                        }
+                    },
+                    "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                            "provisioning_profile": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "_filepicker": true,
+                                "title": "Provisioning Profile",
+                                "description": "Path to the location of the provisioning profile to embed into your iOS application. This is necessary to be able to install the app on devices.",
+                                "_order": 1
+                            },
+                            "developer_certificate": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "title": "Certificate",
+                                "description": "<i>OS X Only.</i> Name of the certificate to use to sign your iOS app with. See our docs for more details on how to manage certificates.",
+                                "_order": 2
+                            },
+                            "developer_certificate_path": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "_filepicker": true,
+                                "title": "Certificate Path",
+                                "description": "<i>Not required for OS X.</i> Path to p12 or pfx certificate file, see our docs for more details on how to manage certificates.",
+                                "_order": 3
+                            },
+                            "developer_certificate_password": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "_password": true,
+                                "title": "Certificate Password",
+                                "description": "<i>Not required for OS X.</i> Password for above certificate file.",
+                                "_order": 4
+                            }
+                        },
+                        "_order": 4
+                    }
+                }
+            }
+        },
+
+        "android": {
+            "required": false,
+            "type": "object",
+            "additionalProperties": false,
+            "title": "Android",
+            "properties": {
+                "device": {
+                    "type": "string",
+                    "blank": false,
+                    "required": false,
+                    "title": "Device",
+                    "description": "Either 'simulator' or a specific device ID",
+                    "_order": 1
+                },
+                "sdk": {
+                    "type": "string",
+                    "required": false,
+                    "_dirpicker": true,
+                    "title": "Android SDK",
+                    "description": "Path to the location of the Android SDK on your local filesystem.",
+                    "_order": 2
+                },
+                "purge": {
+                    "type": "boolean",
+                    "required": false,
+                    "_order": 3,
+                    "title": "Purge",
+                    "description": "Remove the app (and all related settings/data) before installing and running new version."
+                },
+                "dontsign": {
+                    "type": "boolean",
+                    "required": false,
+                    "_order": 4,
+                    "title": "Don't sign Android App Bundle",
+                    "description": "Do not attempt to sign the Android App Bundle during the packaging process."
+                },
+                "profiles": {
+                    "required": true,
+                    "type": "object",
+                    "properties": {
+                        "DEFAULT": {
+                            "_comment": "Fixed default profile to hold us over until we allow dynamic add/remove of profiles",
+                            "type": "object",
+                            "required": true,
+                            "properties": {
+                                "keystore": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "_filepicker": true,
+                                    "title": "Key Store",
+                                    "description": "Path to the keystore you wish to use to sign packaged Android apps."
+                                },
+                                "keyalias": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "title": "Key Alias",
+                                    "description": "Alias given to your key in the keystore"
+                                },
+                                "storepass": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "_password": true,
+                                    "title": "Store Password",
+                                    "description": "Password for your keystore"
+                                },
+                                "keypass": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "_password": true,
+                                    "title": "Key Password",
+                                    "description": "Password for your key"
+                                },
+                                "sigalg": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "title": "Signature Algorithm",
+                                    "description": "Signing Algorithm to use for AAB Signature"
+                                },
+                                "digestalg": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "title": "Digest Algorithm",
+                                    "description": "Digest Algorithm to use for AAB Signature"
+                                }
+                            }
+                        }
+                    },
+                    "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                            "keystore": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "_filepicker": true,
+                                "title": "Key Store",
+                                "description": "Path to the keystore you wish to use to sign packaged Android apps."
+                            },
+                            "keyalias": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "title": "Key Alias",
+                                "description": "Alias given to your key in the keystore"
+                            },
+                            "storepass": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "_password": true,
+                                "title": "Store Password",
+                                "description": "Password for your keystore"
+                            },
+                            "keypass": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "_password": true,
+                                "title": "Key Password",
+                                "description": "Password for your key"
+                            },
+                            "sigalg": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "title": "Signature Algorithm",
+                                "description": "Signing Algorithm to use for AAB Signature"
+                            },
+                            "digestalg": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "title": "Digest Algorithm",
+                                "description": "Digest Algorithm to use for AAB Signature "
+                            }
+                        }
+                    },
+                    "_order": 4
+                }
+            }
+        },
+
+        "web": {
+            "required": false,
+            "type": "object",
+            "additionalProperties": false,
+            "title": "Web",
+            "properties": {
+                "node_path": {
+                    "type": "string",
+                    "blank": false,
+                    "required": false,
+                    "_dirpicker": true,
+                    "title": "Node Path",
+                    "description": "The path to your node installation",
+                    "_order": 1
+                },
+                "profiles": {
+                    "required": true,
+                    "type": "object",
+                    "_order": 2,
+                    "properties": {
+                        "DEFAULT": {
+                            "_comment": "Fixed default profile to hold us over until we allow dynamic add/remove of profiles",
+                            "type": "object",
+                            "required": true,
+                            "properties": {
+                                "heroku_api_key": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "title": "Heroku API Key"
+                                },
+                                "heroku_app_name": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "title": "Heroku App Name"
+                                }
+                            }
+                        }
+                    },
+                    "additionalProperties": {
+                        "type": "object",
+                        "properties": {
+                            "heroku_api_key": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "title": "Heroku API Key"
+                            },
+                            "heroku_app_name": {
+                                "type": "string",
+                                "blank": false,
+                                "required": false,
+                                "title": "Heroku App Name"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

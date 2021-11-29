@@ -1,0 +1,11 @@
+{
+	"description": "module manifest",
+	"type": "object",
+	"properties": {
+		"name": {
+			"required": true,
+			"type": "string"
+		}
+	},
+	"additionalProperties": false
+}

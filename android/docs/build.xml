@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="doc" name="api docs">
+<target name="doc" description="my docs">
+<javadoc packagenames="io.trigger.forge.android.core,com.google.gson"
+           destdir="docs"
+           sourcepath="../ForgeCore/src"
+           classpath="/Users/jenkins/android-sdks/platforms/android-15/android.jar"
+           >
+      <doclet name="com.google.doclava.Doclava" path="doclava-1.0.6.jar">
+        <!-- federation -->
+        <param name="-federate" /><param name="JDK"/>
+        <param name="http://download.oracle.com/javase/6/docs/api/index.html?"/>
+        <param name="-federationxml"/><param name="JDK"/>
+        <param name="http://doclava.googlecode.com/svn/static/api/openjdk-6.xml"/>
+        <param name="-federate" /><param name="Android"/>
+        <param name="http://developer.android.com/reference"/>
+        <param name="-federationxml"/><param name="Android"/>
+        <param name="http://doclava.googlecode.com/svn/static/api/android-10.xml"/>
+        <param name="-todo"/><param name="todo.html"/>
+      </doclet>
+    </javadoc>
+</target>
+</project>

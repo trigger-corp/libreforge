@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="io.trigger.forge.android.inspector"
+      android:versionCode="1"
+      android:versionName="1.0"
+      android:installLocation="auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Android 11 is starting to filter queryIntentActivities() -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="*" />
+        </intent>
+    </queries>
+
+    <application android:name="io.trigger.forge.android.core.ForgeApp" android:icon="@mipmap/ic_launcher" android:label="ForgeInspector">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:name="io.trigger.forge.android.core.ForgeActivity"
+                  android:configChanges="mcc|mnc|locale|touchscreen|keyboardHidden|navigation|orientation|screenLayout|uiMode|fontScale|screenSize"
+                  android:launchMode="singleTask"
+                  android:stateNotNeeded="true"
+                  android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="io.trigger.forge.android.core.ForgeFileProvider"
+            android:authorities="${applicationId}.ForgeFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                       android:resource="@xml/provider_paths"/>
+        </provider>
+
+        <provider android:name="io.trigger.forge.android.core.ForgeContentProvider"
+            android:authorities="io.trigger.forge.android.inspector"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+    </application>
+</manifest>

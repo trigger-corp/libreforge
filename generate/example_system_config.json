@@ -1,0 +1,7 @@
+// Make a copy of this file called "system_config.json" and enter the correct values for your computer/system/server.
+// Do not commit your own "system_config.json" to source control.
+// Only use forward-slashes in paths.
+// Remove all comments (JSON does not allow comments).
+{
+	"android_sdk_dir": "/absolute/path/to/android-sdk"
+}

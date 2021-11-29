@@ -1,0 +1,144 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.0"
+        classpath "com.google.gms:google-services:4.3.2"
+    }
+    System.properties["com.android.build.gradle.overrideVersionCheck"] = "true"
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+        maven {
+            url "http://dl.bintray.com/openid/net.openid"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        flatDir {
+            dirs "ForgeModule/libs"
+        }
+    }
+}
+
+ext {
+    dependencies = [
+        "androidx.legacy:legacy-support-v4:1.0.0",
+        "com.google.guava:guava:28.0-android",
+
+        // backports java.nio.file https://github.com/henrik-lindqvist/safs/tree/master/safs-android
+        "com.llamalab.safs:safs-android:0.2.0"
+    ]
+
+    buildToolsVersion = "30.0.0"
+
+    minSdkVersion = moduleMinSdkVersion() ?: 14
+    compileSdkVersion = 30
+    targetSdkVersion = 30
+
+    compileOptions = {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    debug = {
+        debuggable true
+        minifyEnabled false
+        shrinkResources false
+    }
+
+    release = {
+        debuggable false
+        minifyEnabled true
+        shrinkResources false
+    }
+
+    supportLibraryVersion = "28.0.0"
+}
+
+wrapper {
+    gradleVersion = "6.5.1"
+}
+
+task getHomeDir doLast {
+    println gradle.gradleHomeDir
+}
+
+import groovy.json.JsonSlurper
+def moduleDependencies() {
+    def f = new File("ForgeInspector/gradle.json")
+    if (f.exists()) {
+        def jsonSlurper = new JsonSlurper()
+        def config = jsonSlurper.parseText(f.text)
+        config["dependencies"] ?: []
+    } else {
+        []
+    }
+}
+
+def moduleGradlePlugins() {
+    def f = new File("ForgeInspector/gradle.json")
+    if (f.exists()) {
+        def jsonSlurper = new JsonSlurper()
+        def config = jsonSlurper.parseText(f.text)
+        config["gradlePlugins"] ?: []
+    } else {
+        []
+    }
+}
+
+def moduleExcludeJars() {
+    def f = new File("ForgeInspector/gradle.json")
+    if (f.exists()) {
+        def jsonSlurper = new JsonSlurper()
+        def config = jsonSlurper.parseText(f.text)
+        config["exclude_jars"] ?: []
+    } else {
+        []
+    }
+}
+
+def moduleManifestPlaceholders() {
+    def f = new File("ForgeInspector/gradle.json")
+    if (f.exists()) {
+        def jsonSlurper = new JsonSlurper()
+        def config = jsonSlurper.parseText(f.text)
+        config["manifestPlaceholders"] ?: [:]
+    } else {
+        [:]
+    }
+}
+
+
+def moduleMinSdkVersion() {
+    def f = new File("ForgeInspector/gradle.json")
+    if (f.exists()) {
+        def jsonSlurper = new JsonSlurper()
+        def config = jsonSlurper.parseText(f.text)
+        config["minSdkVersion"] ?: null
+    } else {
+        null
+    }
+}
+
+def moduleResConfigs() {
+    def f = new File("ForgeInspector/gradle.json")
+    if (f.exists()) {
+        def jsonSlurper = new JsonSlurper()
+        def config = jsonSlurper.parseText(f.text)
+        config["resConfigs"] ?: []
+    } else {
+        []
+    }
+}

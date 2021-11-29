@@ -1,0 +1,8 @@
+{
+    "build_tools": {
+        "minimum": "3.3.86",
+        "maximum": "3.99.99"
+    },
+
+    "targets": ["android", "ios", "web", "an-inspector", "ios-inspector", "osx", "osx-inspector", "ios-native"]
+}

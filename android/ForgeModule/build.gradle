@@ -1,0 +1,96 @@
+apply plugin: "com.android.library"
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        compileOptions rootProject.ext.compileOptions
+        manifestPlaceholders = moduleManifestPlaceholders()
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        vanilla {
+            dimension "default"
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile "AndroidManifest.xml"
+            java.srcDirs = ["src"]
+            resources.srcDirs = ["src"]
+            aidl.srcDirs = ["src"]
+            renderscript.srcDirs = ["src"]
+            res.srcDirs = ["res"]
+            assets.srcDirs = ["assets"]
+            jniLibs.srcDirs = ["libs"]
+        }
+        vanilla {
+            java.srcDirs = ["flavors/vanilla/src"]
+        }
+    }
+
+    buildTypes {
+        debug rootProject.ext.debug
+        release rootProject.ext.release << {
+            proguardFile getDefaultProguardFile("proguard-android.txt")
+            proguardFile "../ForgeInspector/proguard-project.txt"
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    useLibrary "org.apache.http.legacy"
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"], exclude: ["forgecore.jar",
+                                                                       "metadata-extractor-2.6.4.jar",
+                                                                       "xmpcore.jar"])
+
+    implementation rootProject.ext.dependencies
+
+    vanillaImplementation (name:"ForgeCore-vanilla-debug", ext:"aar")
+
+    implementation moduleDependencies()
+
+    fileTree(dir: "libs", include: "**/*-vanilla-release.aar")
+    .each { File file ->
+        def name = file.name.lastIndexOf(".").with { it != -1 ? file.name[0..<it] : file.name }
+        dependencies.add("vanillaImplementation", [name: name , ext: "aar"])
+        println "Added module aar for vanilla: $name"
+    }
+}
+
+repositories{
+    flatDir {
+        dirs "libs"
+    }
+}
+
+task updateModule (dependsOn: ":ForgeModule:assembleRelease") {
+    doLast {
+        // copy vanilla jar for backwards compatibility
+        copy {
+            from "build/intermediates/bundles/vanilla/debug/classes.jar"
+            into "../../../module/android"
+            rename { "module.jar" }
+        }
+        println "\n\tUpdated module/android/module.jar"
+
+        // copy aar flavors for platforms >= 2.4.1
+        copy {
+            from "build/outputs/aar/ForgeModule-vanilla-release.aar"
+            into "../../../module/android"
+        }
+        println "\tUpdated module/android/ForgeModule-vanilla-release.aar"
+
+    }
+}

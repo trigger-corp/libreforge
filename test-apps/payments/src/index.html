@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Test Runner</title>
+		<link rel="stylesheet" href="qunit-git.css" type="text/css" media="screen">
+		<script src="jquery.min.js"></script>
+		<script>
+			var buyProduct = function(product) {
+				forge.payments.purchaseProduct(product,
+					function (id) {
+						$("#output").append('<p>Purchase of '+product+' start with id: '+id+'</p>');
+					},
+					function (data) {
+						$("#output").append('<p>Purchase of '+product+' failed: '+JSON.stringify(data)+'</p>');
+					}
+				);
+			};
+			var restoreTransactions = function () {
+				forge.payments.restoreTransactions(function () {
+					$("#output").append('<p>Restoring transactions...</p>');
+				},function (data) {
+					$("#output").append('<p>Restoring transactions failed: '+JSON.stringify(data)+'</p>');
+				});
+			};
+			forge.payments.transactionReceived.addListener(function (data, confirm) {
+				var result = $('<p></p>');
+				for (x in data) {
+					if (x.indexOf('inapp') !== 0) {
+						result.append(x+': '+JSON.stringify(data[x])+'<br>');
+					}
+				}
+				$('#output').append(result);
+				confirm();
+			});
+		</script>
+	</head>
+	<body>
+		<h1 onclick='buyProduct("test")'>Buy "test"</h1>
+		<h1 onclick='buyProduct("test2")'>Buy "test2"</h1>
+		<h1 onclick='buyProduct("android.test.purchased")'>Buy "android.test.purchased"</h1>
+		<h1 onclick='buyProduct("android.test.canceled")'>Buy "android.test.canceled"</h1>
+		<h1 onclick='buyProduct("android.test.refunded")'>Buy "android.test.refunded"</h1>
+		<h1 onclick='buyProduct("android.test.item_unavailable")'>Buy "android.test.item_unavailable"</h1>
+		<hr>
+		<h1 onclick='restoreTransactions()'>Restore transactions</h1>
+		<hr>
+		<h1>Output</h1>
+		<div id="output"></div>
+	</body>
+</html>

@@ -1,0 +1,1011 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		B31B6D6215C13ED200854074 /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B31B6D6315C13ED200854074 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				B31B6D6815C13EE400854074 /* ShellScript */,
+			);
+			dependencies = (
+				B31B6D7B15C146DE00854074 /* PBXTargetDependency */,
+				B31B6D6715C13EDB00854074 /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		710CADBD24ED76BA00ECDA72 /* ForgeStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 7109351924E67FA900498255 /* ForgeStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		710CADBE24ED76BD00ECDA72 /* ForgeStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7109351A24E67FA900498255 /* ForgeStorage.m */; };
+		7111AAAA22F1CCEF0066F283 /* httpd_API.h in Headers */ = {isa = PBXBuildFile; fileRef = 7111AAA622F1CCEF0066F283 /* httpd_API.h */; };
+		7111AAAB22F1CCEF0066F283 /* httpd_EventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 7111AAA722F1CCEF0066F283 /* httpd_EventListener.m */; };
+		7111AAAC22F1CCEF0066F283 /* httpd_API.m in Sources */ = {isa = PBXBuildFile; fileRef = 7111AAA822F1CCEF0066F283 /* httpd_API.m */; };
+		7111AAAD22F1CCEF0066F283 /* httpd_EventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7111AAA922F1CCEF0066F283 /* httpd_EventListener.h */; };
+		7111AAB422F1CE1E0066F283 /* Criollo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7111AAB322F1CE1E0066F283 /* Criollo.framework */; };
+		7111AAB622F1CE2A0066F283 /* libCriollo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7111AAB522F1CE2A0066F283 /* libCriollo.a */; };
+		7111AAB822F1DCED0066F283 /* localhost.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 7111AAB722F1DCED0066F283 /* localhost.p12 */; };
+		711D4DD72313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.h in Headers */ = {isa = PBXBuildFile; fileRef = 711D4DD52313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		711D4DD82313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 711D4DD62313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.m */; };
+		713D4DC619A232D600A054D2 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 713D4DC419A232D600A054D2 /* Reachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		713D4DC719A232D600A054D2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 713D4DC519A232D600A054D2 /* Reachability.m */; };
+		713D4DCB19A37F1F00A054D2 /* ForgeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 713D4DC919A37F1F00A054D2 /* ForgeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		713D4DCC19A37F1F00A054D2 /* ForgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713D4DCA19A37F1F00A054D2 /* ForgeViewController.m */; };
+		713EAF231F75348B00BA522A /* NSData+MimeTypeForData.h in Headers */ = {isa = PBXBuildFile; fileRef = 713EAF211F75348B00BA522A /* NSData+MimeTypeForData.h */; };
+		713EAF241F75348B00BA522A /* NSData+MimeTypeForData.m in Sources */ = {isa = PBXBuildFile; fileRef = 713EAF221F75348B00BA522A /* NSData+MimeTypeForData.m */; };
+		713EAF271F75353800BA522A /* ForgeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 713EAF1F1F751CAC00BA522A /* ForgeUtil.m */; };
+		7146C92624EAB5AE00862BFA /* NSString+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 7146C92424EAB5AE00862BFA /* NSString+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7146C92724EAB5AE00862BFA /* NSString+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7146C92524EAB5AE00862BFA /* NSString+Hex.m */; };
+		7158AC9C19374AFA00F9C8AD /* live_API.h in Headers */ = {isa = PBXBuildFile; fileRef = 7158AC9A19374AFA00F9C8AD /* live_API.h */; };
+		7158AC9D19374AFA00F9C8AD /* live_API.m in Sources */ = {isa = PBXBuildFile; fileRef = 7158AC9B19374AFA00F9C8AD /* live_API.m */; };
+		7164EA1324F006200004C0EA /* ForgeError.h in Headers */ = {isa = PBXBuildFile; fileRef = 7164EA1124F006200004C0EA /* ForgeError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7164EA1424F006200004C0EA /* ForgeError.m in Sources */ = {isa = PBXBuildFile; fileRef = 7164EA1224F006200004C0EA /* ForgeError.m */; };
+		7177B825212D8ABD00A30EA7 /* JLPermissionsCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 7177B822212D8ABD00A30EA7 /* JLPermissionsCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7177B826212D8ABD00A30EA7 /* JLPermissionsCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 7177B823212D8ABD00A30EA7 /* JLPermissionsCore.m */; };
+		7177B827212D8ABD00A30EA7 /* JLPermissionsCore+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 7177B824212D8ABD00A30EA7 /* JLPermissionsCore+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7180FA6F1974218B005D00F4 /* tools_API.h in Headers */ = {isa = PBXBuildFile; fileRef = 7180FA6D1974218B005D00F4 /* tools_API.h */; };
+		7180FA701974218B005D00F4 /* tools_API.m in Sources */ = {isa = PBXBuildFile; fileRef = 7180FA6E1974218B005D00F4 /* tools_API.m */; };
+		718CC0471F7BD37700E54B03 /* ForgeUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 713EAF261F75349200BA522A /* ForgeUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		718CC0591F7E43B300E54B03 /* ForgeConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 718CC0571F7E43B300E54B03 /* ForgeConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		718CC05A1F7E43B300E54B03 /* ForgeConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 718CC0581F7E43B300E54B03 /* ForgeConstant.m */; };
+		719AE8B41F42D1EE00625C2B /* NSString+ObjectFromJSONString.h in Headers */ = {isa = PBXBuildFile; fileRef = 719AE8B21F42D1EE00625C2B /* NSString+ObjectFromJSONString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		719AE8B51F42D1EE00625C2B /* NSString+ObjectFromJSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 719AE8B31F42D1EE00625C2B /* NSString+ObjectFromJSONString.m */; };
+		719AE8B81F42D2BE00625C2B /* NSData+ObjectFromJSONData.h in Headers */ = {isa = PBXBuildFile; fileRef = 719AE8B61F42D2BE00625C2B /* NSData+ObjectFromJSONData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		719AE8B91F42D2BE00625C2B /* NSData+ObjectFromJSONData.m in Sources */ = {isa = PBXBuildFile; fileRef = 719AE8B71F42D2BE00625C2B /* NSData+ObjectFromJSONData.m */; };
+		719AE8BC1F42D46800625C2B /* NSDictionary+JSONString.h in Headers */ = {isa = PBXBuildFile; fileRef = 719AE8BA1F42D46800625C2B /* NSDictionary+JSONString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		719AE8BD1F42D46800625C2B /* NSDictionary+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 719AE8BB1F42D46800625C2B /* NSDictionary+JSONString.m */; };
+		71B3781A1F8234BB000DD4EB /* WKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B378191F822D8C000DD4EB /* WKWebViewController.xib */; };
+		71B3781D1F826CC8000DD4EB /* layout_API.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B3781B1F826CC8000DD4EB /* layout_API.h */; };
+		71B3781E1F826CC8000DD4EB /* layout_API.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B3781C1F826CC8000DD4EB /* layout_API.m */; };
+		71B8836A1E7D1A3400970D5A /* WKWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 71B883681E7D1A3400970D5A /* WKWebViewController.h */; };
+		71B8836B1E7D1A3400970D5A /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B883691E7D1A3400970D5A /* WKWebViewController.m */; };
+		71D66FF0216E5CDF0015990C /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D66FEE216E5CDF0015990C /* libcrypto.a */; };
+		71D66FF1216E5CDF0015990C /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D66FEF216E5CDF0015990C /* libssl.a */; };
+		71DC474D1FC6C17D00CA4F24 /* ForgeMigration.h in Headers */ = {isa = PBXBuildFile; fileRef = 71DC474B1FC6C17D00CA4F24 /* ForgeMigration.h */; };
+		71DC474E1FC6C17D00CA4F24 /* ForgeMigration.m in Sources */ = {isa = PBXBuildFile; fileRef = 71DC474C1FC6C17D00CA4F24 /* ForgeMigration.m */; };
+		71F511451E9380A600FD3E03 /* reload_API.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EE021B16B2C67F0029452B /* reload_API.h */; };
+		71F511461E9380A600FD3E03 /* reload_API.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EE021C16B2C67F0029452B /* reload_API.m */; };
+		71F511471E9380A600FD3E03 /* reload_EventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EE021D16B2C67F0029452B /* reload_EventListener.h */; };
+		71F511481E9380A600FD3E03 /* reload_EventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EE021E16B2C67F0029452B /* reload_EventListener.m */; };
+		71F511491E9380A600FD3E03 /* reload_Util.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EE021F16B2C67F0029452B /* reload_Util.h */; };
+		71F5114A1E9380A600FD3E03 /* reload_Util.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EE022016B2C67F0029452B /* reload_Util.m */; };
+		B300D6BF15C2C3F4007B6E1E /* inspector_API.h in Headers */ = {isa = PBXBuildFile; fileRef = B300D6BD15C2C3F4007B6E1E /* inspector_API.h */; };
+		B300D6C015C2C3F4007B6E1E /* inspector_API.m in Sources */ = {isa = PBXBuildFile; fileRef = B300D6BE15C2C3F4007B6E1E /* inspector_API.m */; };
+		B307825915C2A345006798D7 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = B3FC521D15C175EA003574D9 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B307825A15C2A345006798D7 /* NSFileManager+DirectoryLocations.h in Headers */ = {isa = PBXBuildFile; fileRef = B3FC521F15C175EA003574D9 /* NSFileManager+DirectoryLocations.h */; };
+		B307825B15C2A345006798D7 /* NSURL+QueryString.h in Headers */ = {isa = PBXBuildFile; fileRef = B3FC522115C175EA003574D9 /* NSURL+QueryString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B307825C15C2A345006798D7 /* UIImage+ResizeImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B3FC522315C175EA003574D9 /* UIImage+ResizeImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B307825F15C2A345006798D7 /* ForgeAppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B3FC520015C15322003574D9 /* ForgeAppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B309A70F16A44D0500135475 /* ForgeFile.h in Headers */ = {isa = PBXBuildFile; fileRef = B309A70D16A44D0500135475 /* ForgeFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B309A71016A44D0500135475 /* ForgeFile.m in Sources */ = {isa = PBXBuildFile; fileRef = B309A70E16A44D0500135475 /* ForgeFile.m */; };
+		B31B6D5215C13D5200854074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B6D5115C13D5200854074 /* Foundation.framework */; };
+		B33354EC174142AE003DD801 /* NSFileManager+DoNotBackup.h in Headers */ = {isa = PBXBuildFile; fileRef = B33354EA174142AE003DD801 /* NSFileManager+DoNotBackup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B33354ED174142AE003DD801 /* NSFileManager+DoNotBackup.m in Sources */ = {isa = PBXBuildFile; fileRef = B33354EB174142AE003DD801 /* NSFileManager+DoNotBackup.m */; };
+		B38D5ED416E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = B38D5ED216E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B38D5ED516E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B38D5ED316E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.m */; };
+		B3B7B63F161C325E002DBD56 /* ForgeApp.h in Headers */ = {isa = PBXBuildFile; fileRef = B3B7B63D161C325E002DBD56 /* ForgeApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3B7B640161C325E002DBD56 /* ForgeApp.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7B63E161C325E002DBD56 /* ForgeApp.m */; };
+		B3B7B643161C4E6A002DBD56 /* ForgeEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = B3B7B641161C4E69002DBD56 /* ForgeEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3B7B644161C4E6A002DBD56 /* ForgeEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = B3B7B642161C4E69002DBD56 /* ForgeEventListener.m */; };
+		B3D07BF715C1B3BB00E6B065 /* ForgeCore.h in Headers */ = {isa = PBXBuildFile; fileRef = B3FC52FC15C182F9003574D9 /* ForgeCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3E9B8BE15C6C9D600590095 /* BorderControl.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E9B8B815C6C9D500590095 /* BorderControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3E9B8BF15C6C9D600590095 /* BorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9B8B915C6C9D500590095 /* BorderControl.m */; };
+		B3E9B8C015C6C9D600590095 /* ForgeLog.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E9B8BA15C6C9D500590095 /* ForgeLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3E9B8C115C6C9D600590095 /* ForgeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9B8BB15C6C9D500590095 /* ForgeLog.m */; };
+		B3E9B8C215C6C9D600590095 /* ForgeTask.h in Headers */ = {isa = PBXBuildFile; fileRef = B3E9B8BC15C6C9D500590095 /* ForgeTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3E9B8C315C6C9D600590095 /* ForgeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E9B8BD15C6C9D600590095 /* ForgeTask.m */; };
+		B3EE019516B056980029452B /* event_EventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EE019316B056980029452B /* event_EventListener.h */; };
+		B3EE019616B056980029452B /* event_EventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EE019416B056980029452B /* event_EventListener.m */; };
+		B3EE01A516B056A10029452B /* internal_API.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EE019916B056A10029452B /* internal_API.h */; };
+		B3EE01A616B056A10029452B /* internal_API.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EE019A16B056A10029452B /* internal_API.m */; };
+		B3EE01AD16B056A10029452B /* logging_API.h in Headers */ = {isa = PBXBuildFile; fileRef = B3EE01A316B056A10029452B /* logging_API.h */; };
+		B3EE01AE16B056A10029452B /* logging_API.m in Sources */ = {isa = PBXBuildFile; fileRef = B3EE01A416B056A10029452B /* logging_API.m */; };
+		B3FC51F815C151E5003574D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC51F715C151E5003574D9 /* UIKit.framework */; };
+		B3FC51FF15C1523D003574D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC51FE15C1523D003574D9 /* CoreGraphics.framework */; };
+		B3FC520615C15322003574D9 /* ForgeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FC520115C15322003574D9 /* ForgeAppDelegate.m */; };
+		B3FC523015C175EA003574D9 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FC521E15C175EA003574D9 /* NSData+Base64.m */; };
+		B3FC523215C175EA003574D9 /* NSFileManager+DirectoryLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FC522015C175EA003574D9 /* NSFileManager+DirectoryLocations.m */; };
+		B3FC523415C175EA003574D9 /* NSURL+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FC522215C175EA003574D9 /* NSURL+QueryString.m */; };
+		B3FC523615C175EA003574D9 /* UIImage+ResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FC522415C175EA003574D9 /* UIImage+ResizeImage.m */; };
+		B3FC524815C17B2C003574D9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC524715C17B2C003574D9 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B31B6D6615C13EDB00854074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31B6D4515C13D5200854074 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B31B6D4D15C13D5200854074;
+			remoteInfo = ForgeCore;
+		};
+		B31B6D7A15C146DE00854074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31B6D4515C13D5200854074 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B31B6D6C15C1467100854074;
+			remoteInfo = ForgeCoreResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B31B6D4C15C13D5200854074 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7109351924E67FA900498255 /* ForgeStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgeStorage.h; sourceTree = "<group>"; };
+		7109351A24E67FA900498255 /* ForgeStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgeStorage.m; sourceTree = "<group>"; };
+		7111AAA622F1CCEF0066F283 /* httpd_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpd_API.h; sourceTree = "<group>"; };
+		7111AAA722F1CCEF0066F283 /* httpd_EventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = httpd_EventListener.m; sourceTree = "<group>"; };
+		7111AAA822F1CCEF0066F283 /* httpd_API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = httpd_API.m; sourceTree = "<group>"; };
+		7111AAA922F1CCEF0066F283 /* httpd_EventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = httpd_EventListener.h; sourceTree = "<group>"; };
+		7111AAB322F1CE1E0066F283 /* Criollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Criollo.framework; sourceTree = "<group>"; };
+		7111AAB522F1CE2A0066F283 /* libCriollo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCriollo.a; path = Criollo.framework/libCriollo.a; sourceTree = "<group>"; };
+		7111AAB722F1DCED0066F283 /* localhost.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = localhost.p12; sourceTree = "<group>"; };
+		711D4DD52313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKWebView+AdditionalSafeAreaInsets.h"; sourceTree = "<group>"; };
+		711D4DD62313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+AdditionalSafeAreaInsets.m"; sourceTree = "<group>"; };
+		713D4DC419A232D600A054D2 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		713D4DC519A232D600A054D2 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		713D4DC919A37F1F00A054D2 /* ForgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgeViewController.h; sourceTree = "<group>"; };
+		713D4DCA19A37F1F00A054D2 /* ForgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgeViewController.m; sourceTree = "<group>"; };
+		713EAF161F75097200BA522A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		713EAF1F1F751CAC00BA522A /* ForgeUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgeUtil.m; sourceTree = "<group>"; };
+		713EAF211F75348B00BA522A /* NSData+MimeTypeForData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+MimeTypeForData.h"; sourceTree = "<group>"; };
+		713EAF221F75348B00BA522A /* NSData+MimeTypeForData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+MimeTypeForData.m"; sourceTree = "<group>"; };
+		713EAF261F75349200BA522A /* ForgeUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgeUtil.h; sourceTree = "<group>"; };
+		7146C92424EAB5AE00862BFA /* NSString+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hex.h"; sourceTree = "<group>"; };
+		7146C92524EAB5AE00862BFA /* NSString+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hex.m"; sourceTree = "<group>"; };
+		714A26B71DC8D0520056BC20 /* dummy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dummy.plist; sourceTree = SOURCE_ROOT; };
+		7158AC9A19374AFA00F9C8AD /* live_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = live_API.h; path = live/live_API.h; sourceTree = "<group>"; };
+		7158AC9B19374AFA00F9C8AD /* live_API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = live_API.m; path = live/live_API.m; sourceTree = "<group>"; usesTabs = 1; };
+		7164EA1124F006200004C0EA /* ForgeError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgeError.h; sourceTree = "<group>"; };
+		7164EA1224F006200004C0EA /* ForgeError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgeError.m; sourceTree = "<group>"; };
+		7177B822212D8ABD00A30EA7 /* JLPermissionsCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLPermissionsCore.h; sourceTree = "<group>"; };
+		7177B823212D8ABD00A30EA7 /* JLPermissionsCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLPermissionsCore.m; sourceTree = "<group>"; };
+		7177B824212D8ABD00A30EA7 /* JLPermissionsCore+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLPermissionsCore+Internal.h"; sourceTree = "<group>"; };
+		7180FA6D1974218B005D00F4 /* tools_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools_API.h; sourceTree = "<group>"; };
+		7180FA6E1974218B005D00F4 /* tools_API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tools_API.m; sourceTree = "<group>"; };
+		718CC0571F7E43B300E54B03 /* ForgeConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgeConstant.h; sourceTree = "<group>"; };
+		718CC0581F7E43B300E54B03 /* ForgeConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgeConstant.m; sourceTree = "<group>"; };
+		719AE8B21F42D1EE00625C2B /* NSString+ObjectFromJSONString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ObjectFromJSONString.h"; sourceTree = "<group>"; usesTabs = 0; };
+		719AE8B31F42D1EE00625C2B /* NSString+ObjectFromJSONString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ObjectFromJSONString.m"; sourceTree = "<group>"; usesTabs = 0; };
+		719AE8B61F42D2BE00625C2B /* NSData+ObjectFromJSONData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+ObjectFromJSONData.h"; sourceTree = "<group>"; usesTabs = 0; };
+		719AE8B71F42D2BE00625C2B /* NSData+ObjectFromJSONData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+ObjectFromJSONData.m"; sourceTree = "<group>"; usesTabs = 0; };
+		719AE8BA1F42D46800625C2B /* NSDictionary+JSONString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONString.h"; sourceTree = "<group>"; };
+		719AE8BB1F42D46800625C2B /* NSDictionary+JSONString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONString.m"; sourceTree = "<group>"; };
+		71B378191F822D8C000DD4EB /* WKWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WKWebViewController.xib; sourceTree = "<group>"; };
+		71B3781B1F826CC8000DD4EB /* layout_API.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = layout_API.h; sourceTree = "<group>"; };
+		71B3781C1F826CC8000DD4EB /* layout_API.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = layout_API.m; sourceTree = "<group>"; };
+		71B883681E7D1A3400970D5A /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		71B883691E7D1A3400970D5A /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		71D66FEE216E5CDF0015990C /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		71D66FEF216E5CDF0015990C /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		71DC474B1FC6C17D00CA4F24 /* ForgeMigration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgeMigration.h; sourceTree = "<group>"; };
+		71DC474C1FC6C17D00CA4F24 /* ForgeMigration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgeMigration.m; sourceTree = "<group>"; };
+		B300D6BD15C2C3F4007B6E1E /* inspector_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = inspector_API.h; path = inspector/inspector_API.h; sourceTree = "<group>"; };
+		B300D6BE15C2C3F4007B6E1E /* inspector_API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = inspector_API.m; path = inspector/inspector_API.m; sourceTree = "<group>"; };
+		B309A70D16A44D0500135475 /* ForgeFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgeFile.h; sourceTree = "<group>"; };
+		B309A70E16A44D0500135475 /* ForgeFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgeFile.m; sourceTree = "<group>"; };
+		B31B6D4E15C13D5200854074 /* libForgeCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libForgeCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31B6D5115C13D5200854074 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B31B6D5515C13D5200854074 /* ForgeCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ForgeCore-Prefix.pch"; sourceTree = "<group>"; };
+		B31B6D6D15C1467100854074 /* ForgeCore.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForgeCore.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B33354EA174142AE003DD801 /* NSFileManager+DoNotBackup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DoNotBackup.h"; sourceTree = "<group>"; };
+		B33354EB174142AE003DD801 /* NSFileManager+DoNotBackup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DoNotBackup.m"; sourceTree = "<group>"; };
+		B38D5ED216E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+dismissViewControllerHelper.h"; sourceTree = "<group>"; };
+		B38D5ED316E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+dismissViewControllerHelper.m"; sourceTree = "<group>"; };
+		B3B7B63D161C325E002DBD56 /* ForgeApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgeApp.h; sourceTree = "<group>"; };
+		B3B7B63E161C325E002DBD56 /* ForgeApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ForgeApp.m; sourceTree = "<group>"; };
+		B3B7B641161C4E69002DBD56 /* ForgeEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgeEventListener.h; sourceTree = "<group>"; };
+		B3B7B642161C4E69002DBD56 /* ForgeEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgeEventListener.m; sourceTree = "<group>"; };
+		B3E9B8B815C6C9D500590095 /* BorderControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderControl.h; sourceTree = "<group>"; };
+		B3E9B8B915C6C9D500590095 /* BorderControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderControl.m; sourceTree = "<group>"; };
+		B3E9B8BA15C6C9D500590095 /* ForgeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgeLog.h; sourceTree = "<group>"; };
+		B3E9B8BB15C6C9D500590095 /* ForgeLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgeLog.m; sourceTree = "<group>"; };
+		B3E9B8BC15C6C9D500590095 /* ForgeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgeTask.h; sourceTree = "<group>"; };
+		B3E9B8BD15C6C9D600590095 /* ForgeTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgeTask.m; sourceTree = "<group>"; };
+		B3EE019316B056980029452B /* event_EventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event_EventListener.h; sourceTree = "<group>"; };
+		B3EE019416B056980029452B /* event_EventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = event_EventListener.m; sourceTree = "<group>"; };
+		B3EE019916B056A10029452B /* internal_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = internal_API.h; sourceTree = "<group>"; };
+		B3EE019A16B056A10029452B /* internal_API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = internal_API.m; sourceTree = "<group>"; };
+		B3EE01A316B056A10029452B /* logging_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logging_API.h; sourceTree = "<group>"; };
+		B3EE01A416B056A10029452B /* logging_API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = logging_API.m; sourceTree = "<group>"; };
+		B3EE021B16B2C67F0029452B /* reload_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reload_API.h; sourceTree = "<group>"; };
+		B3EE021C16B2C67F0029452B /* reload_API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reload_API.m; sourceTree = "<group>"; };
+		B3EE021D16B2C67F0029452B /* reload_EventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reload_EventListener.h; sourceTree = "<group>"; };
+		B3EE021E16B2C67F0029452B /* reload_EventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = reload_EventListener.m; sourceTree = "<group>"; };
+		B3EE021F16B2C67F0029452B /* reload_Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reload_Util.h; sourceTree = "<group>"; };
+		B3EE022016B2C67F0029452B /* reload_Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = reload_Util.m; sourceTree = "<group>"; usesTabs = 0; };
+		B3FC51F715C151E5003574D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B3FC51FE15C1523D003574D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B3FC520015C15322003574D9 /* ForgeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgeAppDelegate.h; sourceTree = "<group>"; };
+		B3FC520115C15322003574D9 /* ForgeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgeAppDelegate.m; sourceTree = "<group>"; };
+		B3FC521D15C175EA003574D9 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		B3FC521E15C175EA003574D9 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		B3FC521F15C175EA003574D9 /* NSFileManager+DirectoryLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DirectoryLocations.h"; sourceTree = "<group>"; };
+		B3FC522015C175EA003574D9 /* NSFileManager+DirectoryLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DirectoryLocations.m"; sourceTree = "<group>"; usesTabs = 0; };
+		B3FC522115C175EA003574D9 /* NSURL+QueryString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+QueryString.h"; sourceTree = "<group>"; };
+		B3FC522215C175EA003574D9 /* NSURL+QueryString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+QueryString.m"; sourceTree = "<group>"; };
+		B3FC522315C175EA003574D9 /* UIImage+ResizeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeImage.h"; sourceTree = "<group>"; };
+		B3FC522415C175EA003574D9 /* UIImage+ResizeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeImage.m"; sourceTree = "<group>"; };
+		B3FC524715C17B2C003574D9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B3FC52FC15C182F9003574D9 /* ForgeCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgeCore.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B31B6D4B15C13D5200854074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FC51FF15C1523D003574D9 /* CoreGraphics.framework in Frameworks */,
+				7111AAB422F1CE1E0066F283 /* Criollo.framework in Frameworks */,
+				B31B6D5215C13D5200854074 /* Foundation.framework in Frameworks */,
+				B3FC524815C17B2C003574D9 /* SystemConfiguration.framework in Frameworks */,
+				B3FC51F815C151E5003574D9 /* UIKit.framework in Frameworks */,
+				7111AAB622F1CE2A0066F283 /* libCriollo.a in Frameworks */,
+				71D66FF0216E5CDF0015990C /* libcrypto.a in Frameworks */,
+				71D66FF1216E5CDF0015990C /* libssl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B31B6D6A15C1467100854074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7111AAA522F1CCEF0066F283 /* httpd */ = {
+			isa = PBXGroup;
+			children = (
+				7111AAB722F1DCED0066F283 /* localhost.p12 */,
+				7111AAA622F1CCEF0066F283 /* httpd_API.h */,
+				7111AAA822F1CCEF0066F283 /* httpd_API.m */,
+				7111AAA922F1CCEF0066F283 /* httpd_EventListener.h */,
+				7111AAA722F1CCEF0066F283 /* httpd_EventListener.m */,
+			);
+			path = httpd;
+			sourceTree = "<group>";
+		};
+		7158AC9919374AD700F9C8AD /* live */ = {
+			isa = PBXGroup;
+			children = (
+				7158AC9A19374AFA00F9C8AD /* live_API.h */,
+				7158AC9B19374AFA00F9C8AD /* live_API.m */,
+			);
+			name = live;
+			sourceTree = "<group>";
+		};
+		7177B821212D8ABD00A30EA7 /* JLPermissions */ = {
+			isa = PBXGroup;
+			children = (
+				7177B822212D8ABD00A30EA7 /* JLPermissionsCore.h */,
+				7177B823212D8ABD00A30EA7 /* JLPermissionsCore.m */,
+				7177B824212D8ABD00A30EA7 /* JLPermissionsCore+Internal.h */,
+			);
+			path = JLPermissions;
+			sourceTree = "<group>";
+		};
+		7180FA6C1974218B005D00F4 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				7180FA6D1974218B005D00F4 /* tools_API.h */,
+				7180FA6E1974218B005D00F4 /* tools_API.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		71B378201F826D05000DD4EB /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				71B3781B1F826CC8000DD4EB /* layout_API.h */,
+				71B3781C1F826CC8000DD4EB /* layout_API.m */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		71D66FEC216E5CDF0015990C /* SharedLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				7111AAB322F1CE1E0066F283 /* Criollo.framework */,
+				7111AAB522F1CE2A0066F283 /* libCriollo.a */,
+				71D66FED216E5CDF0015990C /* openssl */,
+			);
+			path = SharedLibraries;
+			sourceTree = SOURCE_ROOT;
+		};
+		71D66FED216E5CDF0015990C /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				71D66FEE216E5CDF0015990C /* libcrypto.a */,
+				71D66FEF216E5CDF0015990C /* libssl.a */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		B300D6BB15C2C3DE007B6E1E /* inspector */ = {
+			isa = PBXGroup;
+			children = (
+				B300D6BD15C2C3F4007B6E1E /* inspector_API.h */,
+				B300D6BE15C2C3F4007B6E1E /* inspector_API.m */,
+			);
+			name = inspector;
+			sourceTree = "<group>";
+		};
+		B31B6D4315C13D5200854074 = {
+			isa = PBXGroup;
+			children = (
+				B31B6D5315C13D5200854074 /* ForgeCore */,
+				B31B6D5015C13D5200854074 /* Frameworks */,
+				B31B6D4F15C13D5200854074 /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		B31B6D4F15C13D5200854074 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B31B6D4E15C13D5200854074 /* libForgeCore.a */,
+				B31B6D6D15C1467100854074 /* ForgeCore.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B31B6D5015C13D5200854074 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC51FE15C1523D003574D9 /* CoreGraphics.framework */,
+				B31B6D5115C13D5200854074 /* Foundation.framework */,
+				B3FC524715C17B2C003574D9 /* SystemConfiguration.framework */,
+				B3FC51F715C151E5003574D9 /* UIKit.framework */,
+				713EAF161F75097200BA522A /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B31B6D5315C13D5200854074 /* ForgeCore */ = {
+			isa = PBXGroup;
+			children = (
+				71D66FEC216E5CDF0015990C /* SharedLibraries */,
+				B31B6D5415C13D5200854074 /* Supporting Files */,
+				B3EE019216B056980029452B /* event */,
+				7111AAA522F1CCEF0066F283 /* httpd */,
+				B300D6BB15C2C3DE007B6E1E /* inspector */,
+				B3EE019816B056A10029452B /* internal */,
+				7177B821212D8ABD00A30EA7 /* JLPermissions */,
+				71B378201F826D05000DD4EB /* layout */,
+				7158AC9919374AD700F9C8AD /* live */,
+				B3EE01A216B056A10029452B /* logging */,
+				B3FC523C15C17668003574D9 /* Reachability */,
+				B3EE021A16B2C67F0029452B /* reload */,
+				7180FA6C1974218B005D00F4 /* tools */,
+				B3FC521215C175EA003574D9 /* utils */,
+				B3E9B8B815C6C9D500590095 /* BorderControl.h */,
+				B3E9B8B915C6C9D500590095 /* BorderControl.m */,
+				B3B7B63D161C325E002DBD56 /* ForgeApp.h */,
+				B3B7B63E161C325E002DBD56 /* ForgeApp.m */,
+				B3FC520015C15322003574D9 /* ForgeAppDelegate.h */,
+				B3FC520115C15322003574D9 /* ForgeAppDelegate.m */,
+				718CC0571F7E43B300E54B03 /* ForgeConstant.h */,
+				718CC0581F7E43B300E54B03 /* ForgeConstant.m */,
+				B3FC52FC15C182F9003574D9 /* ForgeCore.h */,
+				7164EA1124F006200004C0EA /* ForgeError.h */,
+				7164EA1224F006200004C0EA /* ForgeError.m */,
+				B3B7B641161C4E69002DBD56 /* ForgeEventListener.h */,
+				B3B7B642161C4E69002DBD56 /* ForgeEventListener.m */,
+				B309A70D16A44D0500135475 /* ForgeFile.h */,
+				B309A70E16A44D0500135475 /* ForgeFile.m */,
+				B3E9B8BA15C6C9D500590095 /* ForgeLog.h */,
+				B3E9B8BB15C6C9D500590095 /* ForgeLog.m */,
+				71DC474B1FC6C17D00CA4F24 /* ForgeMigration.h */,
+				71DC474C1FC6C17D00CA4F24 /* ForgeMigration.m */,
+				7109351924E67FA900498255 /* ForgeStorage.h */,
+				7109351A24E67FA900498255 /* ForgeStorage.m */,
+				B3E9B8BC15C6C9D500590095 /* ForgeTask.h */,
+				B3E9B8BD15C6C9D600590095 /* ForgeTask.m */,
+				713EAF261F75349200BA522A /* ForgeUtil.h */,
+				713EAF1F1F751CAC00BA522A /* ForgeUtil.m */,
+				713D4DC919A37F1F00A054D2 /* ForgeViewController.h */,
+				713D4DCA19A37F1F00A054D2 /* ForgeViewController.m */,
+				71B883681E7D1A3400970D5A /* WKWebViewController.h */,
+				71B883691E7D1A3400970D5A /* WKWebViewController.m */,
+				71B378191F822D8C000DD4EB /* WKWebViewController.xib */,
+			);
+			path = ForgeCore;
+			sourceTree = "<group>";
+		};
+		B31B6D5415C13D5200854074 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				714A26B71DC8D0520056BC20 /* dummy.plist */,
+				B31B6D5515C13D5200854074 /* ForgeCore-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3EE019216B056980029452B /* event */ = {
+			isa = PBXGroup;
+			children = (
+				B3EE019316B056980029452B /* event_EventListener.h */,
+				B3EE019416B056980029452B /* event_EventListener.m */,
+			);
+			path = event;
+			sourceTree = "<group>";
+		};
+		B3EE019816B056A10029452B /* internal */ = {
+			isa = PBXGroup;
+			children = (
+				B3EE019916B056A10029452B /* internal_API.h */,
+				B3EE019A16B056A10029452B /* internal_API.m */,
+			);
+			path = internal;
+			sourceTree = "<group>";
+		};
+		B3EE01A216B056A10029452B /* logging */ = {
+			isa = PBXGroup;
+			children = (
+				B3EE01A316B056A10029452B /* logging_API.h */,
+				B3EE01A416B056A10029452B /* logging_API.m */,
+			);
+			path = logging;
+			sourceTree = "<group>";
+		};
+		B3EE021A16B2C67F0029452B /* reload */ = {
+			isa = PBXGroup;
+			children = (
+				B3EE021B16B2C67F0029452B /* reload_API.h */,
+				B3EE021C16B2C67F0029452B /* reload_API.m */,
+				B3EE021D16B2C67F0029452B /* reload_EventListener.h */,
+				B3EE021E16B2C67F0029452B /* reload_EventListener.m */,
+				B3EE021F16B2C67F0029452B /* reload_Util.h */,
+				B3EE022016B2C67F0029452B /* reload_Util.m */,
+			);
+			path = reload;
+			sourceTree = "<group>";
+		};
+		B3FC521215C175EA003574D9 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC521D15C175EA003574D9 /* NSData+Base64.h */,
+				B3FC521E15C175EA003574D9 /* NSData+Base64.m */,
+				713EAF211F75348B00BA522A /* NSData+MimeTypeForData.h */,
+				713EAF221F75348B00BA522A /* NSData+MimeTypeForData.m */,
+				719AE8B61F42D2BE00625C2B /* NSData+ObjectFromJSONData.h */,
+				719AE8B71F42D2BE00625C2B /* NSData+ObjectFromJSONData.m */,
+				719AE8BA1F42D46800625C2B /* NSDictionary+JSONString.h */,
+				719AE8BB1F42D46800625C2B /* NSDictionary+JSONString.m */,
+				B3FC521F15C175EA003574D9 /* NSFileManager+DirectoryLocations.h */,
+				B3FC522015C175EA003574D9 /* NSFileManager+DirectoryLocations.m */,
+				B33354EA174142AE003DD801 /* NSFileManager+DoNotBackup.h */,
+				B33354EB174142AE003DD801 /* NSFileManager+DoNotBackup.m */,
+				7146C92424EAB5AE00862BFA /* NSString+Hex.h */,
+				7146C92524EAB5AE00862BFA /* NSString+Hex.m */,
+				719AE8B21F42D1EE00625C2B /* NSString+ObjectFromJSONString.h */,
+				719AE8B31F42D1EE00625C2B /* NSString+ObjectFromJSONString.m */,
+				B3FC522115C175EA003574D9 /* NSURL+QueryString.h */,
+				B3FC522215C175EA003574D9 /* NSURL+QueryString.m */,
+				B3FC522315C175EA003574D9 /* UIImage+ResizeImage.h */,
+				B3FC522415C175EA003574D9 /* UIImage+ResizeImage.m */,
+				B38D5ED216E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.h */,
+				B38D5ED316E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.m */,
+				711D4DD52313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.h */,
+				711D4DD62313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.m */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		B3FC523C15C17668003574D9 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				713D4DC419A232D600A054D2 /* Reachability.h */,
+				713D4DC519A232D600A054D2 /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B31B6D5F15C13D9000854074 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71B8836A1E7D1A3400970D5A /* WKWebViewController.h in Headers */,
+				7180FA6F1974218B005D00F4 /* tools_API.h in Headers */,
+				719AE8B81F42D2BE00625C2B /* NSData+ObjectFromJSONData.h in Headers */,
+				7164EA1324F006200004C0EA /* ForgeError.h in Headers */,
+				7111AAAD22F1CCEF0066F283 /* httpd_EventListener.h in Headers */,
+				B3D07BF715C1B3BB00E6B065 /* ForgeCore.h in Headers */,
+				B307825915C2A345006798D7 /* NSData+Base64.h in Headers */,
+				7111AAAA22F1CCEF0066F283 /* httpd_API.h in Headers */,
+				B307825A15C2A345006798D7 /* NSFileManager+DirectoryLocations.h in Headers */,
+				719AE8B41F42D1EE00625C2B /* NSString+ObjectFromJSONString.h in Headers */,
+				B3E9B8C015C6C9D600590095 /* ForgeLog.h in Headers */,
+				713D4DCB19A37F1F00A054D2 /* ForgeViewController.h in Headers */,
+				B3E9B8C215C6C9D600590095 /* ForgeTask.h in Headers */,
+				B307825B15C2A345006798D7 /* NSURL+QueryString.h in Headers */,
+				713D4DC619A232D600A054D2 /* Reachability.h in Headers */,
+				71B3781D1F826CC8000DD4EB /* layout_API.h in Headers */,
+				71F511471E9380A600FD3E03 /* reload_EventListener.h in Headers */,
+				7158AC9C19374AFA00F9C8AD /* live_API.h in Headers */,
+				B307825C15C2A345006798D7 /* UIImage+ResizeImage.h in Headers */,
+				B307825F15C2A345006798D7 /* ForgeAppDelegate.h in Headers */,
+				B3B7B643161C4E6A002DBD56 /* ForgeEventListener.h in Headers */,
+				B3B7B63F161C325E002DBD56 /* ForgeApp.h in Headers */,
+				7146C92624EAB5AE00862BFA /* NSString+Hex.h in Headers */,
+				7177B825212D8ABD00A30EA7 /* JLPermissionsCore.h in Headers */,
+				71F511451E9380A600FD3E03 /* reload_API.h in Headers */,
+				719AE8BC1F42D46800625C2B /* NSDictionary+JSONString.h in Headers */,
+				718CC0471F7BD37700E54B03 /* ForgeUtil.h in Headers */,
+				B38D5ED416E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.h in Headers */,
+				7177B827212D8ABD00A30EA7 /* JLPermissionsCore+Internal.h in Headers */,
+				718CC0591F7E43B300E54B03 /* ForgeConstant.h in Headers */,
+				B3E9B8BE15C6C9D600590095 /* BorderControl.h in Headers */,
+				71F511491E9380A600FD3E03 /* reload_Util.h in Headers */,
+				B309A70F16A44D0500135475 /* ForgeFile.h in Headers */,
+				713EAF231F75348B00BA522A /* NSData+MimeTypeForData.h in Headers */,
+				B33354EC174142AE003DD801 /* NSFileManager+DoNotBackup.h in Headers */,
+				71DC474D1FC6C17D00CA4F24 /* ForgeMigration.h in Headers */,
+				B300D6BF15C2C3F4007B6E1E /* inspector_API.h in Headers */,
+				B3EE019516B056980029452B /* event_EventListener.h in Headers */,
+				B3EE01A516B056A10029452B /* internal_API.h in Headers */,
+				B3EE01AD16B056A10029452B /* logging_API.h in Headers */,
+				710CADBD24ED76BA00ECDA72 /* ForgeStorage.h in Headers */,
+				711D4DD72313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B31B6D4D15C13D5200854074 /* ForgeCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B31B6D5C15C13D5200854074 /* Build configuration list for PBXNativeTarget "ForgeCore" */;
+			buildPhases = (
+				B31B6D4A15C13D5200854074 /* Sources */,
+				B31B6D4B15C13D5200854074 /* Frameworks */,
+				B31B6D4C15C13D5200854074 /* CopyFiles */,
+				B31B6D5F15C13D9000854074 /* Headers */,
+				B31B6D6115C13E0C00854074 /* Prepare Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForgeCore;
+			productName = ForgeCore;
+			productReference = B31B6D4E15C13D5200854074 /* libForgeCore.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B31B6D6C15C1467100854074 /* ForgeCoreResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B31B6D7715C1467100854074 /* Build configuration list for PBXNativeTarget "ForgeCoreResources" */;
+			buildPhases = (
+				B31B6D6915C1467100854074 /* Sources */,
+				B31B6D6A15C1467100854074 /* Frameworks */,
+				B31B6D6B15C1467100854074 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForgeCoreResources;
+			productName = ForgeCoreResources;
+			productReference = B31B6D6D15C1467100854074 /* ForgeCore.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B31B6D4515C13D5200854074 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Trigger Corp";
+			};
+			buildConfigurationList = B31B6D4815C13D5200854074 /* Build configuration list for PBXProject "ForgeCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+			);
+			mainGroup = B31B6D4315C13D5200854074;
+			productRefGroup = B31B6D4F15C13D5200854074 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B31B6D4D15C13D5200854074 /* ForgeCore */,
+				B31B6D6215C13ED200854074 /* Framework */,
+				B31B6D6C15C1467100854074 /* ForgeCoreResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B31B6D6B15C1467100854074 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7111AAB822F1DCED0066F283 /* localhost.p12 in Resources */,
+				71B3781A1F8234BB000DD4EB /* WKWebViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B31B6D6115C13E0C00854074 /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# With the new Xcode build system (>= Xcode 10) environment variables get propogated to sub-projects with the result that when we do a: \n#    xcodebuild -sdk iphoneos -configuration Release EXECUTABLE_NAME=Forge\n# ...we output \"Forge\" instead of libForgeCore.a\nif [ \"${EXECUTABLE_NAME}\" = \"Forge\" ] && [ -f \"${TARGET_BUILD_DIR}/Forge\" ]; then\n    cp \"${TARGET_BUILD_DIR}/Forge\" \"${TARGET_BUILD_DIR}/libForgeCore.a\"\nfi\n";
+		};
+		B31B6D6815C13EE400854074 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nSF_OTHER_VALID_ARCHS=\"x86_64\" \nSF_OTHER_ARCHS=\"x86_64\"\nelse\nSF_OTHER_PLATFORM=iphoneos\nSF_OTHER_VALID_ARCHS=\"arm64\" \nSF_OTHER_ARCHS=\"arm64\"\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild VALID_ARCHS=${SF_OTHER_VALID_ARCHS} ONLY_ACTIVE_ARCH=NO ARCHS=${SF_OTHER_ARCHS} -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}/DependentBuilds\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B31B6D4A15C13D5200854074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F5114A1E9380A600FD3E03 /* reload_Util.m in Sources */,
+				7180FA701974218B005D00F4 /* tools_API.m in Sources */,
+				71F511461E9380A600FD3E03 /* reload_API.m in Sources */,
+				71DC474E1FC6C17D00CA4F24 /* ForgeMigration.m in Sources */,
+				710CADBE24ED76BD00ECDA72 /* ForgeStorage.m in Sources */,
+				71B3781E1F826CC8000DD4EB /* layout_API.m in Sources */,
+				B3FC520615C15322003574D9 /* ForgeAppDelegate.m in Sources */,
+				71F511481E9380A600FD3E03 /* reload_EventListener.m in Sources */,
+				71B8836B1E7D1A3400970D5A /* WKWebViewController.m in Sources */,
+				7164EA1424F006200004C0EA /* ForgeError.m in Sources */,
+				719AE8BD1F42D46800625C2B /* NSDictionary+JSONString.m in Sources */,
+				711D4DD82313D76A0013C59A /* WKWebView+AdditionalSafeAreaInsets.m in Sources */,
+				7177B826212D8ABD00A30EA7 /* JLPermissionsCore.m in Sources */,
+				B3FC523015C175EA003574D9 /* NSData+Base64.m in Sources */,
+				B3FC523215C175EA003574D9 /* NSFileManager+DirectoryLocations.m in Sources */,
+				B3FC523415C175EA003574D9 /* NSURL+QueryString.m in Sources */,
+				B3FC523615C175EA003574D9 /* UIImage+ResizeImage.m in Sources */,
+				713D4DCC19A37F1F00A054D2 /* ForgeViewController.m in Sources */,
+				B300D6C015C2C3F4007B6E1E /* inspector_API.m in Sources */,
+				B3E9B8BF15C6C9D600590095 /* BorderControl.m in Sources */,
+				B3E9B8C115C6C9D600590095 /* ForgeLog.m in Sources */,
+				B3E9B8C315C6C9D600590095 /* ForgeTask.m in Sources */,
+				7146C92724EAB5AE00862BFA /* NSString+Hex.m in Sources */,
+				7111AAAC22F1CCEF0066F283 /* httpd_API.m in Sources */,
+				7158AC9D19374AFA00F9C8AD /* live_API.m in Sources */,
+				B3B7B640161C325E002DBD56 /* ForgeApp.m in Sources */,
+				B3B7B644161C4E6A002DBD56 /* ForgeEventListener.m in Sources */,
+				B309A71016A44D0500135475 /* ForgeFile.m in Sources */,
+				B3EE019616B056980029452B /* event_EventListener.m in Sources */,
+				B3EE01A616B056A10029452B /* internal_API.m in Sources */,
+				719AE8B91F42D2BE00625C2B /* NSData+ObjectFromJSONData.m in Sources */,
+				B3EE01AE16B056A10029452B /* logging_API.m in Sources */,
+				713D4DC719A232D600A054D2 /* Reachability.m in Sources */,
+				B38D5ED516E606FF00EDCB08 /* UIViewController+dismissViewControllerHelper.m in Sources */,
+				B33354ED174142AE003DD801 /* NSFileManager+DoNotBackup.m in Sources */,
+				7111AAAB22F1CCEF0066F283 /* httpd_EventListener.m in Sources */,
+				713EAF241F75348B00BA522A /* NSData+MimeTypeForData.m in Sources */,
+				713EAF271F75353800BA522A /* ForgeUtil.m in Sources */,
+				719AE8B51F42D1EE00625C2B /* NSString+ObjectFromJSONString.m in Sources */,
+				718CC05A1F7E43B300E54B03 /* ForgeConstant.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B31B6D6915C1467100854074 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B31B6D6715C13EDB00854074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B31B6D4D15C13D5200854074 /* ForgeCore */;
+			targetProxy = B31B6D6615C13EDB00854074 /* PBXContainerItemProxy */;
+		};
+		B31B6D7B15C146DE00854074 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B31B6D6C15C1467100854074 /* ForgeCoreResources */;
+			targetProxy = B31B6D7A15C146DE00854074 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B31B6D5A15C13D5200854074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B31B6D5B15C13D5200854074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B31B6D5D15C13D5200854074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/ForgeCore.dst;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/ForgeCore/httpd",
+					"$(PROJECT_DIR)/SharedLibraries",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForgeCore/ForgeCore-Prefix.pch";
+				HEADER_SEARCH_PATHS = "./**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SharedLibraries/openssl",
+					"$(PROJECT_DIR)/ForgeCore/httpd/Criollo.framework",
+					"$(PROJECT_DIR)/SharedLibraries/Criollo.framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		B31B6D5E15C13D5200854074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/ForgeCore.dst;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/ForgeCore/httpd",
+					"$(PROJECT_DIR)/SharedLibraries",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForgeCore/ForgeCore-Prefix.pch";
+				HEADER_SEARCH_PATHS = "./**";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SharedLibraries/openssl",
+					"$(PROJECT_DIR)/ForgeCore/httpd/Criollo.framework",
+					"$(PROJECT_DIR)/SharedLibraries/Criollo.framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		B31B6D6415C13ED200854074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = build;
+			};
+			name = Debug;
+		};
+		B31B6D6515C13ED200854074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = build;
+			};
+			name = Release;
+		};
+		B31B6D7815C1467100854074 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_BITCODE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForgeCoreResources/ForgeCoreResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/dummy.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ForgeCore;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B31B6D7915C1467100854074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForgeCoreResources/ForgeCoreResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/dummy.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ForgeCore;
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B31B6D4815C13D5200854074 /* Build configuration list for PBXProject "ForgeCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31B6D5A15C13D5200854074 /* Debug */,
+				B31B6D5B15C13D5200854074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B31B6D5C15C13D5200854074 /* Build configuration list for PBXNativeTarget "ForgeCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31B6D5D15C13D5200854074 /* Debug */,
+				B31B6D5E15C13D5200854074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B31B6D6315C13ED200854074 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31B6D6415C13ED200854074 /* Debug */,
+				B31B6D6515C13ED200854074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B31B6D7715C1467100854074 /* Build configuration list for PBXNativeTarget "ForgeCoreResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B31B6D7815C1467100854074 /* Debug */,
+				B31B6D7915C1467100854074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B31B6D4515C13D5200854074 /* Project object */;
+}

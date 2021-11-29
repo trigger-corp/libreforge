@@ -1,0 +1,63 @@
+apply plugin: "com.android.library"
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        compileOptions rootProject.ext.compileOptions
+
+        buildConfigField "long", "TIMESTAMP", System.currentTimeMillis() + "L"
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+        vanilla {
+            dimension "default"
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile "AndroidManifest.xml"
+            java.srcDirs = ["src"]
+            resources.srcDirs = ["src"]
+            aidl.srcDirs = ["src"]
+            renderscript.srcDirs = ["src"]
+            res.srcDirs = ["res"]
+            assets.srcDirs = ["assets"]
+        }
+        vanilla {
+            java.srcDirs = ["flavors/vanilla/src"]
+        }
+    }
+
+    buildTypes {
+        debug rootProject.ext.debug
+        release {
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions {
+        preDexLibraries false
+    }
+
+    useLibrary "org.apache.http.legacy"
+}
+
+dependencies {
+    implementation rootProject.ext.dependencies
+
+    implementation files("libs/metadata-extractor-2.6.4.jar")
+    implementation files("libs/xmpcore.jar")
+}

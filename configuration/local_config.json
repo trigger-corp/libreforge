@@ -1,0 +1,21 @@
+{
+    "general": {
+    },
+    "ios": {
+        "profiles": {
+            "DEFAULT": {
+                "provisioning_profile": ""
+            }
+        },
+        "devicetypeid": "com.apple.CoreSimulator.SimDeviceType.iPhone-11"
+    },
+    "android": {
+        "sdk": "",
+        "profiles": {
+            "DEFAULT": {
+                "keystore": "",
+                "keyalias": ""
+            }
+        }
+    }
+}

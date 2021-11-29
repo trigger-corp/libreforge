@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "properties": {
+        "this_module": {
+            "type": "object",
+            "properties": {
+                "config": {
+                    "type": "object",
+                    "required": false
+                }
+            }
+        },
+        "modules": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "config": {
+                        "type": "object",
+                        "required": false
+                    },
+                    "disabled": {
+                        "type": "boolean",
+                        "required": false
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "core": {
+            "type": "object",
+            "required": false
+        },
+        "flags": {
+            "type": "object",
+            "required": false
+        }
+    },
+    "additionalProperties": false
+}

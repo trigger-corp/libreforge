@@ -1,0 +1,53 @@
+{
+	"description": "module manifest",
+	"type": "object",
+	"properties": {
+		"namespace": {
+			"required": true,
+			"type": "string"
+		},
+		"description": {
+			"required": true,
+			"type": "string"
+		},
+		"changes": {
+			"required": false,
+			"type": "string"
+		},
+		"version": {
+			"required": true,
+			"type": "string",
+			"pattern": "^\\d{1,5}\\.\\d{1,5}(\\.\\d{1,5})?$"
+		},
+		"platform_version": {
+			"required": true,
+			"type": "string"
+		},
+		"min_platform_version": {
+			"required": true,
+			"type": "string"
+		},
+		"max_platform_version": {
+			"required": false,
+			"type": "string"
+		},
+		"dependencies": {
+			"required": false,
+			"type": "object",
+			"additionalProperties": {
+				"type": "object",
+				"properties": {
+					"minimum_version": {
+						"type": "string",
+						"required": false
+					},
+					"maximum_version": {
+						"type": "string",
+						"required": false
+					}
+				}
+			}
+		}
+	},
+	"additionalProperties": false
+}

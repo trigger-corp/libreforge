@@ -1,0 +1,57 @@
+{
+	"author": "nobody@example.com",
+	"config_version": "2",
+	"description": "My Extension Description",
+	"modules": {
+		"activations": [
+			{
+				"patterns": [
+					"http://*/*",
+					"https://*/*"
+				],
+				"run_at": "start",
+				"scripts": [
+					"js/every-page.js"
+				],
+				"styles": []
+			}
+		],
+		"background": {
+			"files": [
+				"js/background.js"
+			]
+		},
+		"button": {
+			"default_icon": "img/logo-forge.png",
+			"default_popup": "index.html",
+			"default_title": "An example browser toolbar icon"
+		},
+		"contact": true,
+		"event": true,
+		"file": true,
+		"geolocation": true,
+		"is": true,
+		"logging": {
+			"level": "INFO"
+		},
+		"message": true,
+		"notification": true,
+		"package_names": {
+			"android": "io.trigger.test.payments",
+			"ios": "io.trigger.test.payments"
+		},
+		"payments": {
+			"androidPublicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkEkZMu7QLKL5bH0hujThh6hBInqwYnhS6j4dGGLcTW2UfD1UOZ6WufQEGsSVHGd/uYTEXH1bB4D73I0AIIvNHSYewhtFygF/RLkpfuVde3WynTF35Z1+jbBHHzFMh2YkCp+xjUXTdnP01VTFBrKqYaKRqlamfh2MOZXGT0zV8fwV3SXRQzH0SX9wQpeZWrYHYnl1b40B8XcI4EaEq9btxJCJ7BHwqxqU3N1OTJgKVJrT06p2mo/UaHN7z5omYWVEMKhJVLC7CzEPXFUWLybtaOb2OMZV5b+ZYHACg1T913qtwCDcaa4rx8LkCp2nnbI4KPyq1w/nYbCIQxIfvjxpYQIDAQAB"
+		},
+		"prefs": true,
+		"request": {
+			"permissions": []
+		},
+		"sms": true,
+		"tabs": true,
+		"tools": true
+	},
+	"name": "CD test payments",
+	"platform_version": "default",
+	"version": "0.1"
+}

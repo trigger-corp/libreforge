@@ -1,0 +1,43 @@
+# - forge-dependencies --------------------------------------------------------
+
+# requests and its dependencies
+requests==2.24.0
+certifi==2020.6.20
+chardet==3.0.4
+idna==2.10
+urllib3==1.25.9
+
+# modules with no dependents
+#validictory==1.1.2
+genshi==0.7.3
+pystache==0.5.4
+biplist==1.0.3
+simplejson==3.17.2
+six==1.15.0
+
+
+# -forge-dependencies.forked --------------------------------------------------
+
+# TODO unfork
+-e git+git://github.com/trigger-corp/validictory.git#egg=Validictory
+
+
+# - forge-dependencies.future -------------------------------------------------
+
+# TODO futurize
+# future==0.18.2
+
+
+# - TODO obsolete ? -----------------------------------------------------------
+
+# Jinja2==2.6
+# Pygments==1.4
+# Sphinx==1.0.8
+# argparse==1.1
+# coverage==3.5.1
+# docutils==0.8.1
+# mock==0.7.2
+# nose==1.1.2
+# nosexcover==1.0.7
+# wsgiref==0.1.2
+# PyHamcrest==1.6

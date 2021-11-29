@@ -1,0 +1,10 @@
+include ":ForgeCore" // app
+include ":ForgeInspector"
+
+// https://docs.gradle.org/current/userguide/build_cache.html
+buildCache {
+    local(DirectoryBuildCache) {
+        //directory = new File(rootDir, 'build-cache')
+        removeUnusedEntriesAfterDays = 7
+    }
+}

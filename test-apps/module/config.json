@@ -1,0 +1,20 @@
+{
+	"config_version": "4",
+	"uuid": "moduletestapp",
+	"name": "Module test app",
+	"description": "Module test app",
+	"author": "Trigger.io",
+	"version": "1.0",
+	"platform_version": "default",
+	"core": {
+		"general": {
+			"logging": {
+				"level": "DEBUG"
+			},
+			"trusted_urls": [
+				"*://*.trigger.io/*75d92dce*"
+			]
+		}
+	},
+	"modules": {}
+}

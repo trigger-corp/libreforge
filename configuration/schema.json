@@ -1,0 +1,376 @@
+{
+    "description": "Forge app generation configuration",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "config_version": {
+            "required": true,
+            "type": "string",
+            "title": "Config Version",
+            "description": "An internal reference to the version of the layout of this config file, you should not need to change this manually",
+            "_hide": true
+        },
+        "name": {
+            "required": true,
+            "type": "string",
+            "title": "Name",
+            "description": "The display name of your app as it will be seen by the user.",
+            "_order": 1
+        },
+        "author": {
+            "required": true,
+            "type": "string",
+            "title": "Author",
+            "_order": 3
+        },
+        "description": {
+            "required": false,
+            "type": "string",
+            "title": "Description",
+            "_order": 2
+        },
+        "platform_version": {
+            "required": true,
+            "type": "string",
+            "title": "Platform Version",
+            "description": "The Forge platform level this application should be built against, most of the time you will not need to manually change this option.",
+            "_order": 6
+        },
+        "version": {
+            "required": true,
+            "type": "string",
+            "title": "App Version",
+            "description": "The version number for your app, consisting of up to 3 . separated integers, i.e. \"1.3.32\".",
+            "pattern": "^\\d{,5}(\\.\\d{,5})?(\\.\\d{,5})?$",
+            "_order": 4
+        },
+        "build_number": {
+            "required": false,
+            "description": "Build number for app",
+            "required": false,
+            "type": "object",
+            "properties": {
+                "ios": {
+                    "type": "string",
+                    "title": "iOS",
+                    "description": "iOS build number. Consisting of up to 3 . separated integers, i.e. \"1.3.32\".",
+                    "pattern": "^\\d*(\\.\\d*)?(\\.\\d*)?$"
+                },
+                "android": {
+                    "type": "string",
+                    "title": "iOS",
+                    "description": "Android build number. Consisting of a single integer.",
+                    "pattern": "^\\d*$"
+                }
+            },
+            "additionalProperties": false,
+            "_order": 4
+        },
+        "homepage": {
+            "required": false,
+            "type": "string",
+            "title": "Homepage",
+            "description": "Your website, or location of more information about this app.",
+            "_order": 5
+        },
+        "core": {
+            "description": "Configuration for core functionality of your Trigger.io app.",
+            "required": false,
+            "type": "object",
+            "properties": {
+                "general": {
+                    "description": "General options that can affect all platforms.",
+                    "required": false,
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "reload": {
+                            "description": "Enable reload functionality.",
+                            "type": "boolean",
+                            "required": false
+                        },
+                        "reload_forcewifi": {
+                            "description": "Disable reload functionality on mobile data connections.",
+                            "type": "boolean",
+                            "required": false
+                        },
+                        "reload_manual": {
+                            "description": "Disable automatic reload updates.",
+                            "type": "boolean",
+                            "required": false
+                        },
+                        "trusted_urls": {
+                            "description": "Trusted remote URLs that can access Forge APIs.",
+                            "type": "array",
+                            "required": false,
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "url": {
+                            "required": false,
+                            "description": "URL to load as initial app page instead of local content.",
+                            "type": "string"
+                        },
+                        "logging": {
+                            "type": "object",
+                            "required": false,
+                            "properties": {
+                                "level": {
+                                    "required": true,
+                                    "description": "How verbose logging output should be",
+                                    "type": "string",
+                                    "enum": ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
+                                }
+                            }
+                        },
+                        "live": {
+                            "type": "object",
+                            "required": false,
+                            "properties": {
+                                "enabled": {
+                                    "required": false,
+                                    "description": "Boot app in Forge Live mode",
+                                    "type": "boolean"
+                                },
+                                "url": {
+                                    "required": false,
+                                    "description": "URL to use for Forge Live mode",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "cache": {
+                            "type": "object",
+                            "required": false,
+                            "properties": {
+                                "enabled": {
+                                    "required": false,
+                                    "description": "Enable WebView caching.",
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "localisations": {
+                            "description": "Limits the localisations the app will be built for to this list",
+                            "type": "array",
+                            "required": false,
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "httpd": {
+                            "type": "object",
+                            "required": false,
+                            "properties": {
+                                "port": {
+                                    "required": false,
+                                    "type": "number",
+                                    "description": "Port to launch httpd on. Set to zero to automatically choose a free port."
+                                },
+                                "certificate_path": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "_filepicker": true,
+                                    "title": "Certificate Path",
+                                    "description": "Path to p12 certificate file."
+                                },
+                                "certificate_password": {
+                                    "type": "string",
+                                    "blank": false,
+                                    "required": false,
+                                    "_password": true,
+                                    "title": "Certificate Password",
+                                    "description": "Password for p12 certificate file."
+                                }
+                            }
+                        }
+                    }
+                },
+                "ios": {
+                    "required": false,
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "minimum_version": {
+                            "required": false,
+                            "type": "string",
+                            "description": "(deprecated) Minimum allowed iOS version for your app",
+                            "enum": ["11.0", "12.0", "13.0"]
+                        },
+                        "device_family": {
+                            "required": false,
+                            "type": "string",
+                            "description": "Limit types of devices this app can run on.",
+                            "enum": ["any", "ipad", "iphone"]
+                        },
+                        "package_name": {
+                            "description": "The package name must be a uniform type identifier (UTI) that contains only alphanumeric characters (A-Z,a-z,0-9), hyphen (-), and period (.). The string should be in reverse-DNS format. For example: io.trigger.myapp",
+                            "pattern": "^[a-z][a-z0-9\\-]*(\\.[A-Za-z0-9\\-]+)+[0-9A-Za-z\\-]$",
+                            "type": "string",
+                            "required": false
+                        },
+                        "webview": {
+                            "type": "string",
+                            "required": false,
+                            "description": "Deprecated: Apple no longer support UIWebView.",
+                            "enum": ["UIWebView", "WKWebView"]
+                        },
+                        "disable_web_storage_backup": {
+                            "required": false,
+                            "description": "Set to 'true' to prevent HTML5 storage data from being backed up by iCloud",
+                            "type": "boolean"
+                        },
+                        "bounces": {
+                            "required": false,
+                            "description": "Enable overscroll for WebView.",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "android": {
+                    "required": false,
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "minimum_version": {
+                            "required": false,
+                            "type": "string",
+                            "description": "Minimum allowed Android API level for your app",
+                            "enum": ["14","15","16","17","18","19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
+                        },
+                        "disable_ics_acceleration": {
+                            "required": false,
+                            "type": "boolean",
+                            "description": "Disable hardware acceleration on Android 4.0 (ICS) as there are known rendering issues with this version of Android."
+                        },
+                        "remote_debugging": {
+                            "required": false,
+                            "type": "boolean",
+                            "description": "Allow remote debugging with Chrome DevTools on Android 4.4 or higher devices."
+                        },
+                        "package_name": {
+                            "description": "The package name must start with a letter and only contain alphanumeric characters (A-Z,a-z,0-9), underscores (-), and periods (.). The string should be in reverse-DNS format. For example: io.trigger.myapp",
+                            "pattern": "^[a-z][a-z0-9_]*(\\.[A-Za-z0-9_]+)+[0-9A-Za-z_]$",
+                            "type": "string",
+                            "required": false
+                        },
+                        "windowSoftInputMode": {
+                            "required": false,
+                            "type": "string",
+                            "description": "Set how the main window of the activity interacts with the window containing the on-screen soft keyboard"
+                        },
+                        "viewport_fit": {
+                            "required": false,
+                            "description": "Controls whether to adjust the content inset for web views that are placed behind screen elements such as the status bar. The default value is 'auto'",
+                            "type": "string",
+                            "enum": ["auto", "cover"]
+                        }
+                    }
+                }
+            },
+            "additionalProperties": false,
+            "_order": 6
+        },
+        "modules": {
+            "_hide": true,
+            "type": "object",
+            "required": false,
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "version": {
+                        "type": "string",
+                        "required": true
+                    },
+                    "config": {
+                        "type": "object",
+                        "required": false
+                    },
+                    "disabled": {
+                        "type": "boolean",
+                        "required": false
+                    }
+                },
+                "additionalProperties": false
+            },
+            "properties": {
+                "parameters": {
+                    "required": false
+                }
+            }
+        },
+        "flags": {
+            "type": "object",
+            "required": false,
+            "properties": {
+                "promises": {
+                    "required": false,
+                    "description": "Experimental: Enables JavaScript ES6 Promises support.",
+                    "type": "boolean"
+                },
+                "move_filescheme_storage_to_httpscheme": {
+                    "required": false,
+                    "description": "Experimental: Migrate localstorage associated with file:/// scheme content to http://localhost:<httpd.port>",
+                    "type": "boolean"
+                },
+                "ios_migrate_web_storage_for_webview": {
+                    "required": false,
+                    "description": "Experimental: Migrate UIWebView localstorageto WKWebView and vice versa.",
+                    "type": "boolean"
+                },
+                "ios_force_update_uiwebview_safe_area_inset_variables_for_css": {
+                    "required": false,
+                    "description": "Deprecated: Apple no longer support UIWebView.",
+                    "type": "boolean"
+                },
+                "ios_workaround_uiwebview_keyboard_bug_on_ios12": {
+                    "required": false,
+                    "description": "Deprecated: Apple no longer support UIWebView.",
+                    "type": "boolean"
+                },
+                "ios_disable_httpd": {
+                    "required": false,
+                    "description": "Disable built-in httpd for iOS and attempt to use file:/// urls instead",
+                    "type": "boolean"
+                },
+                "ios_also_set_css_safe_area_inset_env_as_var": {
+                    "required": false,
+                    "description": "Set --safe-area-inset-* variables for iOS as well as Android",
+                    "type": "boolean"
+                },
+                "android_workaround_transparent_statusbar_keyboard_bug": {
+                    "required": false,
+                    "description": "Experimental: Workaround for Android WebView bug where soft keyboard obscures inputs if statusbar transparency is enabled.",
+                    "type": "boolean"
+                },
+                "android_uses_cleartext_traffic": {
+                    "required": false,
+                    "description": "Experimental: Allow non-SSL network communication on Android",
+                    "type": "boolean"
+                },
+                "android_disable_httpd": {
+                    "required": false,
+                    "description": "Disable built-in httpd for Android and attempt to use content:/// urls instead",
+                    "type": "boolean"
+                }
+            }
+        },
+        "uuid": {
+            "_hide": true
+        },
+        "config_hash": {
+            "_hide": true,
+            "required": false
+        },
+        "assets_url": {
+            "_hide": true,
+            "required": false
+        },
+        "trigger_domain": {
+            "_hide": true,
+            "required": false
+        }
+    }
+}

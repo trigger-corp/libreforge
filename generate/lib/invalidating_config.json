@@ -1,0 +1,17 @@
+{
+    "platform_version": true,
+    "homepage": true,
+    "modules": true,
+    "version": true,
+    "core": {
+        "android": {
+            "minimum_version": true
+        },
+        "general": {
+            "logging": true
+        },
+        "ios": {
+            "device_family": true
+        }
+    }
+}

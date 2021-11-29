@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'ForgeModule' target in the 'ForgeModule' project
+//
+
+#ifdef __OBJC__
+	#import <WebKit/WebKit.h>
+	#import <Cocoa/Cocoa.h>
+	#import <ForgeCore/ForgeCore.h>
+#endif

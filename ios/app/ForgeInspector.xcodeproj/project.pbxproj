@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		B3E9B87415C2ED5F00590095 /* UniversalForgeModule */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B3E9B87515C2ED5F00590095 /* Build configuration list for PBXAggregateTarget "UniversalForgeModule" */;
+			buildPhases = (
+				B3E9B87815C2EDC300590095 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalForgeModule;
+			productName = UniversalForgeModule;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		7104B28A20F602EE00F3B931 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7104B28820F602EE00F3B931 /* CoreImage.framework */; };
+		712390B51D7ECDE000F78647 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 712390B71D7ECDE000F78647 /* InfoPlist.strings */; };
+		713EAF1A1F75099B00BA522A /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713EAF181F75099B00BA522A /* WebKit.framework */; };
+		7157A2C619C2419F00E80615 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7157A2C519C2419F00E80615 /* Images.xcassets */; };
+		716A9CE624F3E8920011547D /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716A9CE424F3E8920011547D /* UniformTypeIdentifiers.framework */; };
+		719E67F41D5CAC530076C105 /* wC_hR.png in Resources */ = {isa = PBXBuildFile; fileRef = 719E67EA1D5CAC530076C105 /* wC_hR.png */; };
+		719E67F61D5CAC530076C105 /* wC_hC.png in Resources */ = {isa = PBXBuildFile; fileRef = 719E67EC1D5CAC530076C105 /* wC_hC.png */; };
+		719E67F81D5CAC530076C105 /* wR_hC.png in Resources */ = {isa = PBXBuildFile; fileRef = 719E67EE1D5CAC530076C105 /* wR_hC.png */; };
+		719E67FB1D5CAC530076C105 /* wR_hR.png in Resources */ = {isa = PBXBuildFile; fileRef = 719E67F11D5CAC530076C105 /* wR_hR.png */; };
+		71BA1B571D93CF0900008EC9 /* Launch Screen Manual.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BA1B561D93CF0900008EC9 /* Launch Screen Manual.storyboard */; };
+		71C499AD1D5C7866003B72BF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C499AC1D5C7866003B72BF /* Launch Screen.storyboard */; };
+		71FE273D24DBF35000D29C4D /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FE273C24DBF35000D29C4D /* CoreServices.framework */; };
+		B307826C15C2A44F006798D7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B307826B15C2A44F006798D7 /* SystemConfiguration.framework */; };
+		B307826E15C2A47B006798D7 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = B307826D15C2A47B006798D7 /* assets */; };
+		B31D36DB1715639F00B62182 /* libForgeCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B31D36D41715638E00B62182 /* libForgeCore.a */; };
+		B31D36DC171563B400B62182 /* ForgeCore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B31D36D61715638E00B62182 /* ForgeCore.bundle */; };
+		B3FC517C15C14B2A003574D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC517B15C14B2A003574D9 /* UIKit.framework */; };
+		B3FC517E15C14B2A003574D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC517D15C14B2A003574D9 /* Foundation.framework */; };
+		B3FC518015C14B2A003574D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC517F15C14B2A003574D9 /* CoreGraphics.framework */; };
+		B3FC518815C14B2A003574D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FC518715C14B2A003574D9 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B31D36D31715638E00B62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31D36CD1715638E00B62182 /* ForgeCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B31B6D4E15C13D5200854074;
+			remoteInfo = ForgeCore;
+		};
+		B31D36D51715638E00B62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31D36CD1715638E00B62182 /* ForgeCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B31B6D6D15C1467100854074;
+			remoteInfo = ForgeCoreResources;
+		};
+		B31D36D71715639700B62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31D36CD1715638E00B62182 /* ForgeCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B31B6D4D15C13D5200854074;
+			remoteInfo = ForgeCore;
+		};
+		B31D36D91715639700B62182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B31D36CD1715638E00B62182 /* ForgeCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B31B6D6C15C1467100854074;
+			remoteInfo = ForgeCoreResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7104B28820F602EE00F3B931 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		712390B61D7ECDE000F78647 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390B81D7ECDE800F78647 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390B91D7ECE0900F78647 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390BA1D7ECE1400F78647 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390BB1D7ECE1F00F78647 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390BC1D7ECE2600F78647 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390BD1D7ECE3200F78647 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		712390BE1D7ECE3800F78647 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		712390BF1D7ECE3E00F78647 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		712390C01D7ECE4200F78647 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		712390C11D7ECE4800F78647 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390C21D7ECE4F00F78647 /* es-MX */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-MX"; path = "es-MX.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		712390C31D7ECE5200F78647 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390C41D7ECE5600F78647 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390C51D7ECE5A00F78647 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390C61D7ECE5F00F78647 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390C71D7ECE6300F78647 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390C81D7ECE6700F78647 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390C91D7ECE6A00F78647 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390CA1D7ECE6E00F78647 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390CB1D7ECE7100F78647 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390CC1D7ECE7600F78647 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390CD1D7ECE7A00F78647 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390CE1D7ECE7E00F78647 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390CF1D7ECE8200F78647 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D01D7ECE8500F78647 /* hr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hr; path = hr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D11D7ECE8900F78647 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D21D7ECE8D00F78647 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D31D7ECE9300F78647 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D41D7ECE9800F78647 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D51D7ECE9E00F78647 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D61D7ECEA200F78647 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D71D7ECEA600F78647 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D81D7ECEAA00F78647 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		712390D91D7ECEB200F78647 /* af */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = af; path = af.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		713EAF181F75099B00BA522A /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		7157A2C519C2419F00E80615 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		716A9CE424F3E8920011547D /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		719E67EA1D5CAC530076C105 /* wC_hR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wC_hR.png; sourceTree = "<group>"; };
+		719E67EC1D5CAC530076C105 /* wC_hC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wC_hC.png; sourceTree = "<group>"; };
+		719E67EE1D5CAC530076C105 /* wR_hC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wR_hC.png; sourceTree = "<group>"; };
+		719E67F11D5CAC530076C105 /* wR_hR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wR_hR.png; sourceTree = "<group>"; };
+		719FD57B1EFBC214005705CD /* ForgeInspector.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForgeInspector.entitlements; sourceTree = "<group>"; };
+		71BA1B561D93CF0900008EC9 /* Launch Screen Manual.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen Manual.storyboard"; sourceTree = "<group>"; };
+		71C499AC1D5C7866003B72BF /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		71FE273C24DBF35000D29C4D /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		B307826B15C2A44F006798D7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B307826D15C2A47B006798D7 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		B31D36CD1715638E00B62182 /* ForgeCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ForgeCore.xcodeproj; path = ../ForgeCore/ForgeCore.xcodeproj; sourceTree = "<group>"; };
+		B3FC517715C14B2A003574D9 /* ForgeInspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForgeInspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3FC517B15C14B2A003574D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B3FC517D15C14B2A003574D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B3FC517F15C14B2A003574D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B3FC518315C14B2A003574D9 /* ForgeInspector-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ForgeInspector-Info.plist"; sourceTree = "<group>"; };
+		B3FC518715C14B2A003574D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B3FC518915C14B2A003574D9 /* ForgeInspector-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ForgeInspector-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3FC517415C14B2A003574D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FC518015C14B2A003574D9 /* CoreGraphics.framework in Frameworks */,
+				7104B28A20F602EE00F3B931 /* CoreImage.framework in Frameworks */,
+				71FE273D24DBF35000D29C4D /* CoreServices.framework in Frameworks */,
+				B3FC517E15C14B2A003574D9 /* Foundation.framework in Frameworks */,
+				B307826C15C2A44F006798D7 /* SystemConfiguration.framework in Frameworks */,
+				B3FC517C15C14B2A003574D9 /* UIKit.framework in Frameworks */,
+				716A9CE624F3E8920011547D /* UniformTypeIdentifiers.framework in Frameworks */,
+				713EAF1A1F75099B00BA522A /* WebKit.framework in Frameworks */,
+				B31D36DB1715639F00B62182 /* libForgeCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		712390B21D7ECD5E00F78647 /* i8n */ = {
+			isa = PBXGroup;
+			children = (
+				712390B71D7ECDE000F78647 /* InfoPlist.strings */,
+			);
+			name = i8n;
+			sourceTree = "<group>";
+		};
+		719E67E91D5CAC530076C105 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				719E67EA1D5CAC530076C105 /* wC_hR.png */,
+				719E67EC1D5CAC530076C105 /* wC_hC.png */,
+				719E67EE1D5CAC530076C105 /* wR_hC.png */,
+				719E67F11D5CAC530076C105 /* wR_hR.png */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B31D36CE1715638E00B62182 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B31D36D41715638E00B62182 /* libForgeCore.a */,
+				B31D36D61715638E00B62182 /* ForgeCore.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3FC516C15C14B2A003574D9 = {
+			isa = PBXGroup;
+			children = (
+				B31D36CD1715638E00B62182 /* ForgeCore.xcodeproj */,
+				B3FC518115C14B2A003574D9 /* ForgeInspector */,
+				B3FC517A15C14B2A003574D9 /* Frameworks */,
+				B3FC517815C14B2A003574D9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3FC517815C14B2A003574D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC517715C14B2A003574D9 /* ForgeInspector.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3FC517A15C14B2A003574D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC517F15C14B2A003574D9 /* CoreGraphics.framework */,
+				7104B28820F602EE00F3B931 /* CoreImage.framework */,
+				71FE273C24DBF35000D29C4D /* CoreServices.framework */,
+				B3FC517D15C14B2A003574D9 /* Foundation.framework */,
+				B307826B15C2A44F006798D7 /* SystemConfiguration.framework */,
+				B3FC517B15C14B2A003574D9 /* UIKit.framework */,
+				716A9CE424F3E8920011547D /* UniformTypeIdentifiers.framework */,
+				713EAF181F75099B00BA522A /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3FC518115C14B2A003574D9 /* ForgeInspector */ = {
+			isa = PBXGroup;
+			children = (
+				B3FC518215C14B2A003574D9 /* Supporting Files */,
+				719FD57B1EFBC214005705CD /* ForgeInspector.entitlements */,
+				B307826D15C2A47B006798D7 /* assets */,
+			);
+			path = ForgeInspector;
+			sourceTree = "<group>";
+		};
+		B3FC518215C14B2A003574D9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				712390B21D7ECD5E00F78647 /* i8n */,
+				719E67E91D5CAC530076C105 /* Splash */,
+				B3FC518315C14B2A003574D9 /* ForgeInspector-Info.plist */,
+				B3FC518715C14B2A003574D9 /* main.m */,
+				B3FC518915C14B2A003574D9 /* ForgeInspector-Prefix.pch */,
+				7157A2C519C2419F00E80615 /* Images.xcassets */,
+				71BA1B561D93CF0900008EC9 /* Launch Screen Manual.storyboard */,
+				71C499AC1D5C7866003B72BF /* Launch Screen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3FC517615C14B2A003574D9 /* ForgeInspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3FC518F15C14B2A003574D9 /* Build configuration list for PBXNativeTarget "ForgeInspector" */;
+			buildPhases = (
+				B3FC517315C14B2A003574D9 /* Sources */,
+				B3FC517415C14B2A003574D9 /* Frameworks */,
+				B3FC517515C14B2A003574D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B31D36D81715639700B62182 /* PBXTargetDependency */,
+				B31D36DA1715639700B62182 /* PBXTargetDependency */,
+			);
+			name = ForgeInspector;
+			productName = ForgeInspector;
+			productReference = B3FC517715C14B2A003574D9 /* ForgeInspector.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3FC516E15C14B2A003574D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Trigger Corp";
+				TargetAttributes = {
+					B3FC517615C14B2A003574D9 = {
+						DevelopmentTeam = HLUFY5JD2L;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = B3FC517115C14B2A003574D9 /* Build configuration list for PBXProject "ForgeInspector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				fr,
+				de,
+				es,
+				nl,
+				it,
+				"pt-PT",
+				"pt-BR",
+				"zh-Hans",
+				"zh-Hant",
+				ja,
+				"es-MX",
+				ko,
+				da,
+				fi,
+				nb,
+				sv,
+				ru,
+				pl,
+				tr,
+				ar,
+				th,
+				cs,
+				hu,
+				ca,
+				hr,
+				el,
+				he,
+				ro,
+				sk,
+				uk,
+				id,
+				ms,
+				vi,
+				af,
+			);
+			mainGroup = B3FC516C15C14B2A003574D9;
+			productRefGroup = B3FC517815C14B2A003574D9 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B31D36CE1715638E00B62182 /* Products */;
+					ProjectRef = B31D36CD1715638E00B62182 /* ForgeCore.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B3FC517615C14B2A003574D9 /* ForgeInspector */,
+				B3E9B87415C2ED5F00590095 /* UniversalForgeModule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B31D36D41715638E00B62182 /* libForgeCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libForgeCore.a;
+			remoteRef = B31D36D31715638E00B62182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B31D36D61715638E00B62182 /* ForgeCore.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ForgeCore.bundle;
+			remoteRef = B31D36D51715638E00B62182 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3FC517515C14B2A003574D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				719E67F81D5CAC530076C105 /* wR_hC.png in Resources */,
+				7157A2C619C2419F00E80615 /* Images.xcassets in Resources */,
+				719E67F41D5CAC530076C105 /* wC_hR.png in Resources */,
+				B307826E15C2A47B006798D7 /* assets in Resources */,
+				71C499AD1D5C7866003B72BF /* Launch Screen.storyboard in Resources */,
+				71BA1B571D93CF0900008EC9 /* Launch Screen Manual.storyboard in Resources */,
+				719E67F61D5CAC530076C105 /* wC_hC.png in Resources */,
+				719E67FB1D5CAC530076C105 /* wR_hR.png in Resources */,
+				712390B51D7ECDE000F78647 /* InfoPlist.strings in Resources */,
+				B31D36DC171563B400B62182 /* ForgeCore.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B3E9B87815C2EDC300590095 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Building both architectures.\ncd ForgeModule\nxcodebuild VALID_ARCHS=\"arm64\" ONLY_ACTIVE_ARCH=NO ARCHS=\"arm64\" -configuration \"Release\" -target ForgeModule -sdk iphoneos\nxcodebuild -configuration \"Release\" -target ForgeModuleResources -sdk iphoneos\nxcodebuild VALID_ARCHS=\"x86_64\" ONLY_ACTIVE_ARCH=NO ARCHS=\"x86_64\" -configuration \"Release\" -target ForgeModule -sdk iphonesimulator\n\nrm -rf ../build\nmkdir ../build\n\n# Uses the Lipo Tool to merge both binary files (x86_64 + arm64) into one Universal final product.\nlipo -create \"build/Release-iphoneos/libForgeModule.a\" \"build/Release-iphonesimulator/libForgeModule.a\" -output \"../build/module.a\"\nmv build/Release-iphoneos/*.bundle ../build 2>>/dev/null || echo \"No bundle file.\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3FC517315C14B2A003574D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3FC518815C14B2A003574D9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B31D36D81715639700B62182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ForgeCore;
+			targetProxy = B31D36D71715639700B62182 /* PBXContainerItemProxy */;
+		};
+		B31D36DA1715639700B62182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ForgeCoreResources;
+			targetProxy = B31D36D91715639700B62182 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		712390B71D7ECDE000F78647 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				712390B61D7ECDE000F78647 /* en */,
+				712390B81D7ECDE800F78647 /* fr */,
+				712390B91D7ECE0900F78647 /* de */,
+				712390BA1D7ECE1400F78647 /* es */,
+				712390BB1D7ECE1F00F78647 /* nl */,
+				712390BC1D7ECE2600F78647 /* it */,
+				712390BD1D7ECE3200F78647 /* pt-PT */,
+				712390BE1D7ECE3800F78647 /* pt-BR */,
+				712390BF1D7ECE3E00F78647 /* zh-Hans */,
+				712390C01D7ECE4200F78647 /* zh-Hant */,
+				712390C11D7ECE4800F78647 /* ja */,
+				712390C21D7ECE4F00F78647 /* es-MX */,
+				712390C31D7ECE5200F78647 /* ko */,
+				712390C41D7ECE5600F78647 /* da */,
+				712390C51D7ECE5A00F78647 /* fi */,
+				712390C61D7ECE5F00F78647 /* nb */,
+				712390C71D7ECE6300F78647 /* sv */,
+				712390C81D7ECE6700F78647 /* ru */,
+				712390C91D7ECE6A00F78647 /* pl */,
+				712390CA1D7ECE6E00F78647 /* tr */,
+				712390CB1D7ECE7100F78647 /* ar */,
+				712390CC1D7ECE7600F78647 /* th */,
+				712390CD1D7ECE7A00F78647 /* cs */,
+				712390CE1D7ECE7E00F78647 /* hu */,
+				712390CF1D7ECE8200F78647 /* ca */,
+				712390D01D7ECE8500F78647 /* hr */,
+				712390D11D7ECE8900F78647 /* el */,
+				712390D21D7ECE8D00F78647 /* he */,
+				712390D31D7ECE9300F78647 /* ro */,
+				712390D41D7ECE9800F78647 /* sk */,
+				712390D51D7ECE9E00F78647 /* uk */,
+				712390D61D7ECEA200F78647 /* id */,
+				712390D71D7ECEA600F78647 /* ms */,
+				712390D81D7ECEAA00F78647 /* vi */,
+				712390D91D7ECEB200F78647 /* af */,
+			);
+			name = InfoPlist.strings;
+			path = i8n;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3E9B87615C2ED5F00590095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B3E9B87715C2ED5F00590095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_BITCODE = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B3FC518D15C14B2A003574D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		B3FC518E15C14B2A003574D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		B3FC519015C14B2A003574D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = HLUFY5JD2L;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForgeInspector/ForgeInspector-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../ForgeCore/**";
+				INFOPLIST_FILE = "ForgeInspector/ForgeInspector-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.trigger.forge.ios.ForgeInspector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "io trigger forge ios ForgeInspector";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B3FC519115C14B2A003574D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = HLUFY5JD2L;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ForgeInspector/ForgeInspector-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../ForgeCore/**";
+				INFOPLIST_FILE = "ForgeInspector/ForgeInspector-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.trigger.forge.ios.ForgeInspector;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "io trigger forge ios ForgeInspector";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3E9B87515C2ED5F00590095 /* Build configuration list for PBXAggregateTarget "UniversalForgeModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3E9B87615C2ED5F00590095 /* Debug */,
+				B3E9B87715C2ED5F00590095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FC517115C14B2A003574D9 /* Build configuration list for PBXProject "ForgeInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FC518D15C14B2A003574D9 /* Debug */,
+				B3FC518E15C14B2A003574D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3FC518F15C14B2A003574D9 /* Build configuration list for PBXNativeTarget "ForgeInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3FC519015C14B2A003574D9 /* Debug */,
+				B3FC519115C14B2A003574D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3FC516E15C14B2A003574D9 /* Project object */;
+}

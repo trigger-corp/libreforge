@@ -1,0 +1,409 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {
+    };
+    objectVersion = 46;
+    objects = {
+
+/* Begin PBXBuildFile section */
+        B31B6D5215C13D5200854074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B6D5115C13D5200854074 /* Foundation.framework */; };
+        B31B6D6F15C1467100854074 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B6D6E15C1467100854074 /* CoreFoundation.framework */; };
+        B37C3A5D162717A200B50A60 /* ForgeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C3A5C162717A200B50A60 /* ForgeCore.framework */; };
+        B3CC61F21716ECB500A1A8EF /* templatemodule_API.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CC61F01716ECB500A1A8EF /* templatemodule_API.m */; };
+        B3CC61F41716ECBB00A1A8EF /* templatemodule_EventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = B3CC61F31716ECBB00A1A8EF /* templatemodule_EventListener.m */; };
+        B3FC51F815C151E5003574D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC51F715C151E5003574D9 /* UIKit.framework */; };
+        B3FC51FF15C1523D003574D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC51FE15C1523D003574D9 /* CoreGraphics.framework */; };
+        B3FC524815C17B2C003574D9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3FC524715C17B2C003574D9 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+        718C4FD41F28D7F300A1557F /* placeholder.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = placeholder.plist; sourceTree = "<group>"; };
+        B31B6D4E15C13D5200854074 /* libForgeModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libForgeModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
+        B31B6D5115C13D5200854074 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+        B31B6D6D15C1467100854074 /* templatemodule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = templatemodule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+        B31B6D6E15C1467100854074 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+        B37C3A5C162717A200B50A60 /* ForgeCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ForgeCore.framework; path = ../ForgeCore.framework; sourceTree = "<group>"; };
+        B3CC61EF1716ECB500A1A8EF /* templatemodule_API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = templatemodule_API.h; sourceTree = "<group>"; };
+        B3CC61F01716ECB500A1A8EF /* templatemodule_API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = templatemodule_API.m; sourceTree = "<group>"; };
+        B3CC61F11716ECB500A1A8EF /* templatemodule_EventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = templatemodule_EventListener.h; sourceTree = "<group>"; };
+        B3CC61F31716ECBB00A1A8EF /* templatemodule_EventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = templatemodule_EventListener.m; sourceTree = "<group>"; };
+        B3FC51F715C151E5003574D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+        B3FC51FE15C1523D003574D9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+        B3FC524715C17B2C003574D9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+        B31B6D4B15C13D5200854074 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                B3FC524815C17B2C003574D9 /* SystemConfiguration.framework in Frameworks */,
+                B3FC51FF15C1523D003574D9 /* CoreGraphics.framework in Frameworks */,
+                B3FC51F815C151E5003574D9 /* UIKit.framework in Frameworks */,
+                B31B6D5215C13D5200854074 /* Foundation.framework in Frameworks */,
+                B37C3A5D162717A200B50A60 /* ForgeCore.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        B31B6D6A15C1467100854074 /* Frameworks */ = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                B31B6D6F15C1467100854074 /* CoreFoundation.framework in Frameworks */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+        B31B6D4315C13D5200854074 = {
+            isa = PBXGroup;
+            children = (
+                718C4FD41F28D7F300A1557F /* placeholder.plist */,
+                B3CC61EF1716ECB500A1A8EF /* templatemodule_API.h */,
+                B3CC61F01716ECB500A1A8EF /* templatemodule_API.m */,
+                B3CC61F11716ECB500A1A8EF /* templatemodule_EventListener.h */,
+                B3CC61F31716ECBB00A1A8EF /* templatemodule_EventListener.m */,
+                B31B6D5015C13D5200854074 /* Frameworks */,
+                B31B6D4F15C13D5200854074 /* Products */,
+            );
+            sourceTree = "<group>";
+        };
+        B31B6D4F15C13D5200854074 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                B31B6D4E15C13D5200854074 /* libForgeModule.a */,
+                B31B6D6D15C1467100854074 /* templatemodule.bundle */,
+            );
+            name = Products;
+            sourceTree = "<group>";
+        };
+        B31B6D5015C13D5200854074 /* Frameworks */ = {
+            isa = PBXGroup;
+            children = (
+                B37C3A5C162717A200B50A60 /* ForgeCore.framework */,
+                B3FC524715C17B2C003574D9 /* SystemConfiguration.framework */,
+                B3FC51FE15C1523D003574D9 /* CoreGraphics.framework */,
+                B3FC51F715C151E5003574D9 /* UIKit.framework */,
+                B31B6D5115C13D5200854074 /* Foundation.framework */,
+                B31B6D6E15C1467100854074 /* CoreFoundation.framework */,
+            );
+            name = Frameworks;
+            sourceTree = "<group>";
+        };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+        B31B6D4D15C13D5200854074 /* ForgeModule */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = B31B6D5C15C13D5200854074 /* Build configuration list for PBXNativeTarget "ForgeModule" */;
+            buildPhases = (
+                B31B6D4A15C13D5200854074 /* Sources */,
+                B31B6D4B15C13D5200854074 /* Frameworks */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = ForgeModule;
+            productName = ForgeCore;
+            productReference = B31B6D4E15C13D5200854074 /* libForgeModule.a */;
+            productType = "com.apple.product-type.library.static";
+        };
+        B31B6D6C15C1467100854074 /* ForgeModuleResources */ = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = B31B6D7715C1467100854074 /* Build configuration list for PBXNativeTarget "ForgeModuleResources" */;
+            buildPhases = (
+                B31B6D6915C1467100854074 /* Sources */,
+                B31B6D6A15C1467100854074 /* Frameworks */,
+                B31B6D6B15C1467100854074 /* Resources */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = ForgeModuleResources;
+            productName = ForgeCoreResources;
+            productReference = B31B6D6D15C1467100854074 /* templatemodule.bundle */;
+            productType = "com.apple.product-type.bundle";
+        };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+        B31B6D4515C13D5200854074 /* Project object */ = {
+            isa = PBXProject;
+            attributes = {
+                LastUpgradeCheck = 1000;
+                ORGANIZATIONNAME = "Trigger Corp";
+            };
+            buildConfigurationList = B31B6D4815C13D5200854074 /* Build configuration list for PBXProject "ForgeModule" */;
+            compatibilityVersion = "Xcode 3.2";
+            developmentRegion = English;
+            hasScannedForEncodings = 0;
+            knownRegions = (
+                English,
+                en,
+            );
+            mainGroup = B31B6D4315C13D5200854074;
+            productRefGroup = B31B6D4F15C13D5200854074 /* Products */;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (
+                B31B6D4D15C13D5200854074 /* ForgeModule */,
+                B31B6D6C15C1467100854074 /* ForgeModuleResources */,
+            );
+        };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+        B31B6D6B15C1467100854074 /* Resources */ = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+        B31B6D4A15C13D5200854074 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+                B3CC61F21716ECB500A1A8EF /* templatemodule_API.m in Sources */,
+                B3CC61F41716ECBB00A1A8EF /* templatemodule_EventListener.m in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        B31B6D6915C1467100854074 /* Sources */ = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+        B31B6D5A15C13D5200854074 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                COPY_PHASE_STRIP = NO;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_BITCODE = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                ENABLE_TESTABILITY = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_DYNAMIC_NO_PIC = NO;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_OPTIMIZATION_LEVEL = 0;
+                GCC_PREPROCESSOR_DEFINITIONS = (
+                    "DEBUG=1",
+                    "$(inherited)",
+                );
+                GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+            };
+            name = Debug;
+        };
+        B31B6D5B15C13D5200854074 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+                CLANG_ENABLE_OBJC_ARC = YES;
+                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+                CLANG_WARN_BOOL_CONVERSION = YES;
+                CLANG_WARN_COMMA = YES;
+                CLANG_WARN_CONSTANT_CONVERSION = YES;
+                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+                CLANG_WARN_EMPTY_BODY = YES;
+                CLANG_WARN_ENUM_CONVERSION = YES;
+                CLANG_WARN_INFINITE_RECURSION = YES;
+                CLANG_WARN_INT_CONVERSION = YES;
+                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+                CLANG_WARN_STRICT_PROTOTYPES = YES;
+                CLANG_WARN_SUSPICIOUS_MOVE = YES;
+                CLANG_WARN_UNREACHABLE_CODE = YES;
+                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+                COPY_PHASE_STRIP = YES;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_BITCODE = NO;
+                ENABLE_STRICT_OBJC_MSGSEND = YES;
+                GCC_C_LANGUAGE_STANDARD = gnu99;
+                GCC_NO_COMMON_BLOCKS = YES;
+                GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                GCC_WARN_ABOUT_RETURN_TYPE = YES;
+                GCC_WARN_UNDECLARED_SELECTOR = YES;
+                GCC_WARN_UNINITIALIZED_AUTOS = YES;
+                GCC_WARN_UNUSED_FUNCTION = YES;
+                GCC_WARN_UNUSED_VARIABLE = YES;
+                IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+                ONLY_ACTIVE_ARCH = YES;
+                SDKROOT = iphoneos;
+                VALIDATE_PRODUCT = YES;
+            };
+            name = Release;
+        };
+        B31B6D5D15C13D5200854074 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                COPY_PHASE_STRIP = NO;
+                DEAD_CODE_STRIPPING = NO;
+                DEBUG_INFORMATION_FORMAT = dwarf;
+                ENABLE_BITCODE = NO;
+                FRAMEWORK_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "\"$(SRCROOT)\"",
+                    "\"$(SRCROOT)/..\"",
+                );
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = "ForgeModule-Prefix.pch";
+                HEADER_SEARCH_PATHS = "./**";
+                ONLY_ACTIVE_ARCH = YES;
+                OTHER_LDFLAGS = "-ObjC";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SDKROOT = iphoneos;
+                SKIP_INSTALL = YES;
+                STRIP_STYLE = "non-global";
+            };
+            name = Debug;
+        };
+        B31B6D5E15C13D5200854074 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ALWAYS_SEARCH_USER_PATHS = NO;
+                COPY_PHASE_STRIP = NO;
+                DEAD_CODE_STRIPPING = NO;
+                ENABLE_BITCODE = NO;
+                FRAMEWORK_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "\"$(SRCROOT)\"",
+                    "\"$(SRCROOT)/..\"",
+                );
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = "ForgeModule-Prefix.pch";
+                HEADER_SEARCH_PATHS = "./**";
+                ONLY_ACTIVE_ARCH = YES;
+                OTHER_LDFLAGS = "-ObjC";
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SDKROOT = iphoneos;
+                SKIP_INSTALL = YES;
+                STRIP_STYLE = "non-global";
+            };
+            name = Release;
+        };
+        B31B6D7815C1467100854074 /* Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                ENABLE_BITCODE = NO;
+                FRAMEWORK_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "\"$(SRCROOT)\"",
+                );
+                GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = "";
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                INFOPLIST_FILE = "$(SRCROOT)/placeholder.plist";
+                INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+                MACOSX_DEPLOYMENT_TARGET = 10.7;
+                ONLY_ACTIVE_ARCH = YES;
+                PRODUCT_NAME = templatemodule;
+                SDKROOT = iphoneos;
+                WRAPPER_EXTENSION = bundle;
+            };
+            name = Debug;
+        };
+        B31B6D7915C1467100854074 /* Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+                ENABLE_BITCODE = NO;
+                FRAMEWORK_SEARCH_PATHS = (
+                    "$(inherited)",
+                    "\"$(SRCROOT)\"",
+                );
+                GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+                GCC_PRECOMPILE_PREFIX_HEADER = YES;
+                GCC_PREFIX_HEADER = "";
+                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+                INFOPLIST_FILE = "$(SRCROOT)/placeholder.plist";
+                INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+                MACOSX_DEPLOYMENT_TARGET = 10.7;
+                ONLY_ACTIVE_ARCH = YES;
+                PRODUCT_NAME = templatemodule;
+                SDKROOT = iphoneos;
+                WRAPPER_EXTENSION = bundle;
+            };
+            name = Release;
+        };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+        B31B6D4815C13D5200854074 /* Build configuration list for PBXProject "ForgeModule" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                B31B6D5A15C13D5200854074 /* Debug */,
+                B31B6D5B15C13D5200854074 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        B31B6D5C15C13D5200854074 /* Build configuration list for PBXNativeTarget "ForgeModule" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                B31B6D5D15C13D5200854074 /* Debug */,
+                B31B6D5E15C13D5200854074 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        B31B6D7715C1467100854074 /* Build configuration list for PBXNativeTarget "ForgeModuleResources" */ = {
+            isa = XCConfigurationList;
+            buildConfigurations = (
+                B31B6D7815C1467100854074 /* Debug */,
+                B31B6D7915C1467100854074 /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+/* End XCConfigurationList section */
+    };
+    rootObject = B31B6D4515C13D5200854074 /* Project object */;
+}

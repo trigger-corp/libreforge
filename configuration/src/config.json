@@ -1,0 +1,18 @@
+{
+	"config_version": "4",
+	"name": "${name}",
+	"author": "${username}",
+	"version": "0.1",
+	"platform_version": "${platform_version}",
+	"description": "An empty app created by default",
+	"core": {
+		"general": {
+			"logging": {
+				"level": "DEBUG"
+			},
+			"reload": true
+		}
+	},
+	"modules": {
+	}
+}

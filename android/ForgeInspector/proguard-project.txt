@@ -1,0 +1,24 @@
+# Without this libraries like guava cause a huge number of warnings which don't seem to actually matter
+-dontwarn **
+
+# Make sure all of our code is kept since we use reflection and the JS->Java bridge needs to not be obfuscated
+-keep class io.trigger.** { *; }
+
+# Make sure customer 'package_name' namespace is preserved because Gradle now relocates module resources there
+-dontwarn io.trigger.forge.android.inspector.**
+-keep class io.trigger.forge.android.inspector.** { *; }
+
+# Don't nuke org.apache.http.legacy on android-23
+-keep class org.apache.http.** { *; }
+-keep class org.apache.commons.codec.** { *; }
+-keep class org.apache.commons.logging.** { *; }
+-keep class android.net.compatibility.** { *; }
+-keep class android.net.http.** { *; }
+-keep class com.android.internal.http.multipart.** { *; }
+-dontwarn org.apache.http.**
+-dontwarn android.webkit.**
+
+# backports java.nio.file https://github.com/henrik-lindqvist/safs/tree/master/safs-android
+-keep class com.llamalab.safs.spi.FileSystemProvider { *; }
+-keep class * extends com.llamalab.safs.spi.FileSystemProvider { *; }
+-keep class * extends com.llamalab.safs.spi.FileTypeDetector { *; }

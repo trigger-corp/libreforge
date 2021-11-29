@@ -1,0 +1,134 @@
+{
+    "type": "directory",
+    "children": {
+        "manifest.json": {
+            "type": "file",
+            "required": true,
+            "validators": {
+                "json_schema": {
+                    "schema": "manifest"
+                }
+            }
+        },
+        "identity.json": {
+            "type": "file",
+            "required": true,
+            "validators": {
+                "json_schema": {
+                    "schema": "identity"
+                }
+            }
+        },
+        "config_schema.json": {
+            "type": "file"
+        },
+        "inspector_config.json": {
+            "type": "file",
+            "validators": {
+                "json_schema": {
+                    "schema": "inspector_config"
+                }
+            }
+        },
+        "javascript": {
+            "type": "directory",
+            "children": {
+                "module.js": {
+                    "type": "file",
+                    "required": true
+                }
+            },
+            "additionalChildren": false
+        },
+        "tests": {
+            "type": "directory",
+            "children": {
+                "automated.js": {
+                    "type": "file"
+                },
+                "interactive.js": {
+                    "type": "file"
+                }
+            }
+        },
+        "docs": {
+            "type": "directory",
+            "children": {
+                "index.md": {
+                    "type": "file",
+                    "required": true
+                }
+            },
+            "additionalChildren": true
+        },
+        "android": {
+            "type": "directory",
+            "children": {
+                "module.jar": {
+                    "type": "file"
+                },
+                "ForgeModule-vanilla-release.aar": {
+                    "type": "file"
+                },
+                "build_steps.json": {
+                    "type": "file",
+                    "validators": {
+                        "json_schema": {
+                            "schema": "build_steps"
+                        }
+                    }
+                },
+                "res": {
+                    "type": "directory",
+                    "additionalChildren": {
+                        "type": "directory",
+                        "additionalChildren": {
+                            "type": "file"
+                        }
+                    }
+                },
+                "libs": {
+                    "type": "directory"
+                }
+            },
+            "additionalChildren": false
+        },
+        "ios": {
+            "type": "directory",
+            "children": {
+                "module.a": {
+                    "type": "file"
+                },
+                "build_steps.json": {
+                    "type": "file",
+                    "validators": {
+                        "json_schema": {
+                            "schema": "build_steps"
+                        }
+                    }
+                },
+                "bundles": {
+                    "type": "directory",
+                    "additionalChildren": {
+                        "validators": {
+                            "valid_bundle": {}
+                        }
+                    }
+                },
+                "headers": {
+                    "type": "directory",
+                    "additionalChildren": true
+                }
+            },
+            "additionalChildren": false
+        },
+        "osx": {
+            "type": "directory",
+            "validators": {
+                "valid_framework": {}
+            },
+            "additionalChildren": false
+        }
+    },
+    "additionalChildren": false
+}

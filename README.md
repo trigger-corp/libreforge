@@ -38,6 +38,10 @@ Remember to add the following to your shell startup script: (`~/.zshenv` for `zs
 
 ### Configure installation:
 
+Specify Xcode path in `generate/generate/server_tasks.py`:
+
+    xcode_version="/opt/xcode/13.0/Xcode.app"
+
 Link module directory:
 
     cd librewolf.git

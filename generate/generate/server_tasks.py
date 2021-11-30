@@ -216,6 +216,11 @@ def remove_files(build, *removes):
 def move_output(build, *output_dirs):
     for output_dir in output_dirs:
         to = path.join(build.output_dir, output_dir)
+        if path.isdir(to):
+            from datetime import datetime
+            moved_to = os.path.join(to + '-%s' % datetime.now().isoformat().replace(":", "-"))
+            build.log.debug("renaming existing output directory '%s' to '%s'" % (to, moved_to))
+            shutil.move(to, moved_to)
         build.log.debug("moving {0} to {1}".format(output_dir, to))
         shutil.move(output_dir, to)
 

@@ -1,4 +1,4 @@
-# Forge Platform
+# LibreForge
 
 
 ## Installation
@@ -36,12 +36,8 @@ Remember to add the following to your shell startup script: (`~/.zshenv` for `zs
     pip install -r requirements.txt
     python setup.py develop
 
-### Configure installation:
 
-Link module directory:
-
-    cd libreforge.git
-    ln -s ../modules ./modules.local
+## Configure installation:
 
 Create a new file: `libreforge.git/system_config.json`
 
@@ -56,6 +52,26 @@ Create or copy `local_config.json`:
 
     cd libreforge.git
     cp path/to/your/app/local_config.json path/to/libreforge.git/local_config.json
+
+
+## Check out module repositories
+
+Create a new top-level directory (i.e. _not_ inside your `libreforge.git` directory!) which will contain the repositories of all modules in use by your app, for example:
+
+    cd libreforge.git
+    mkdir ../module_checkouts
+
+Now, check out the repositories for all modules in use by your app.
+
+This depends on where your module code is hosted but all Trigger.IO modules can be checked out with:
+
+    git clone https://github.com/trigger-corp/trigger.io-<module>.git trigger.io-<module>.git
+
+For example, to check out the file module:
+
+    cd libreforge.git
+    cd ../module_checkouts
+    git clone https://github.com/trigger-corp/trigger.io-file.git trigger.io-file.git
 
 
 ## Commands
@@ -88,7 +104,7 @@ Then build the app:
                    --config ~/forge-workspace/$PROJECT/src/config.json \
                    --usercode ~/forge-workspace/$PROJECT/src \
                    --userassets ~/forge-workspace/$PROJECT/assets \
-                   --override_modules modules.local \
+                   --override_modules ../module_checkouts \
                    --temp=/tmp/libreforge \
                    --output ~/forge-workspace/$PROJECT
 
@@ -101,7 +117,7 @@ To package an app:
                    --config ~/forge-workspace/$PROJECT/src/config.json \
                    --usercode ~/forge-workspace/$PROJECT/src \
                    --userassets ~/forge-workspace/$PROJECT/assets \
-                   --override_modules modules.local \
+                   --override_modules ../module_checkouts \
                    --temp=/tmp/libreforge \
                    --output ~/forge-workspace/$PROJECT
 
@@ -109,3 +125,29 @@ For iOS, if you are not logged into a local shell, you may also need to do a:
 
     security -v unlock-keychain -p <password> /Library/Keychains/System.keychain
     security -v unlock-keychain -p <password> ~/Library/Keychains/login.keychain-db
+
+
+### `forge-inspector`
+
+You can use the `forge-inspector` command to generate or update a module inspector:
+
+    forge-inspector --target an-inspector \
+                    --modules_folder <directory containing all your module repositories> \
+                    --module <module directory name> \
+                    --temp=<temporary directory for build>
+
+For example, to update the file module's Android inspector:
+
+    cd libreforge.git
+    forge-inspector --target an-inspector \
+                    --modules_folder ../module_checkouts \
+                    --module trigger.io-file.git \
+                    --temp=/tmp/libreforge
+
+...or, to update the iOS inspector:
+
+    cd libreforge.git
+    forge-inspector --target ios-inspector \
+                    --modules_folder ../module_checkouts \
+                    --module trigger.io-file.git \
+                    --temp=/tmp/libreforge

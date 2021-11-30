@@ -652,25 +652,57 @@ def add_modules_ios_native(build):
 
 @task
 def prepare_module_override(build):
-    from_to = (os.path.abspath(os.path.join(build.source_dir, build.override_modules)), 'modules')
-    build.log.info('copying source directory %s to %s' % from_to)
-    shutil.copytree(*from_to, symlinks=True)
+    override_modules = os.path.abspath(os.path.join(build.source_dir, build.override_modules))
 
-    modules = os.listdir('modules')
-    for module in modules:
-        if module.startswith('.'):
+    module_dirs = os.listdir(override_modules)
+    copied = set()
+    for module_dir in module_dirs:
+        build.log.info('checking local module directory: %s' % module_dir)
+
+        module_dir = path.join(override_modules,module_dir, 'module')
+        manifest_json = path.join(module_dir, 'manifest.json')
+
+        # check that path is a directory
+        if not path.isdir(module_dir):
             continue
 
+        # check if directory has a module/manifest.json
+        if not path.isfile(manifest_json):
+            build.log.info('no valid module manifest found at path: %s' % manifest_json)
+            continue
+
+        # import module/manifest.json
+        try:
+            import json
+            with open(manifest_json, 'r') as manifest_file:
+                manifest = json.load(manifest_file)
+        except Exception as e:
+            msg = 'Failed to parse module manifest %s: %s' % (manifest_json, e)
+            build.log.error(msg)
+            raise Exception(msg)
+
+        # check if module has a name
+        if 'namespace' in manifest:
+            module = manifest['namespace']
+        elif 'name' in manifest:
+            module = manifest['name']
+        else:
+            build.log.info('no module namespace or name found in manifest: %s' % manifest_json)
+            continue
+
+        # check if we've already added this module
+        if module in copied:
+            build.log.warn('duplicate module found for \'%s\', ignoring: %s' % (module, module_dir))
+            continue
+
+        # check if module is in use by the current app
         if module not in build.config['modules']:
-            shutil.rmtree(os.path.join('modules', module))
+            build.log.info('module is not in use by app config, skipping: %s' % module)
             continue
 
-        for path in os.listdir(os.path.join('modules', module)):
-            if path == 'module' or path.startswith('.'):
-                continue
-            shutil.rmtree(os.path.join('modules', module, path))
+        # copy module directory to build directory
+        dest = path.join('modules', module)
+        build.log.info('copying module directory %s to %s', module_dir, dest)
+        shutil.copytree(module_dir, dest, symlinks=True)
 
-        for path in os.listdir(os.path.join('modules', module, 'module')):
-            if path.startswith('.'):
-                continue
-            os.rename(os.path.join('modules', module, 'module', path), os.path.join('modules', module, path))
+        copied.add(module)

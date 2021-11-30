@@ -20,8 +20,6 @@ from lib import task
 import minify
 import module_dynamic.build as module_dynamic_build
 
-xcode_version="/opt/xcode/13.0/Xcode-beta.app"
-
 _platform_dir_map = {
     'android': 'development/android',
     'ios': 'development/ios',
@@ -56,6 +54,12 @@ def _urlretrieve(url, destination):
         if actual_length < expected_length:
             raise IOError('server_tasks._urlretrieve: incomplete read ({} bytes read, {} more expected)'.format(actual_length, expected_length - actual_length))
 
+def _xcode_version(build):
+    xcode_version = "/opt/xcode/13.0/Xcode.app"
+    if 'xcode_version' in build.system_config:
+        xcode_version = build.system_config['xcode_version']
+    build.log.info("Using Xcode.app from: %s" % xcode_version)
+    return xcode_version
 
 @task
 def preprocess_config(build):
@@ -358,13 +362,13 @@ def xcode_build(build, source_dir):
         os.mkdir(dist_dir)
 
     sim_build_cmd = [
-        "%s/Contents/Developer/usr/bin/xcodebuild" % xcode_version,
+        "%s/Contents/Developer/usr/bin/xcodebuild" % _xcode_version(build),
         '-sdk', 'iphonesimulator',
         '-configuration', 'Release',
         'EXECUTABLE_NAME=Forge'
     ]
     device_build_cmd = [
-        "%s/Contents/Developer/usr/bin/xcodebuild" % xcode_version,
+        "%s/Contents/Developer/usr/bin/xcodebuild" % _xcode_version(build),
         '-sdk', 'iphoneos',
         '-configuration', 'Release',
         'EXECUTABLE_NAME=Forge'
@@ -398,7 +402,7 @@ def xcode_core_build(build, source_dir):
         os.mkdir(dist_dir)
 
     build_cmd = [
-        "%s/Contents/Developer/usr/bin/xcodebuild" % xcode_version,
+        "%s/Contents/Developer/usr/bin/xcodebuild" % _xcode_version(build),
         '-target', 'Framework',
         '-configuration', 'Debug',
     ]
@@ -425,7 +429,7 @@ def xcode_osx_core_build(build, source_dir):
         os.mkdir(dist_dir)
 
     build_cmd = [
-        "%s/Contents/Developer/usr/bin/xcodebuild" % xcode_version,
+        "%s/Contents/Developer/usr/bin/xcodebuild" % _xcode_version(build),
         '-configuration', 'Debug',
     ]
     try:
@@ -451,7 +455,7 @@ def xcode_osx_build(build, source_dir):
         os.mkdir(dist_dir)
 
     build_cmd = [
-        "%s/Contents/Developer/usr/bin/xcodebuild" % xcode_version,
+        "%s/Contents/Developer/usr/bin/xcodebuild" % _xcode_version(build),
         '-configuration', 'Release',
     ]
     try:

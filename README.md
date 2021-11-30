@@ -32,32 +32,29 @@ Remember to add the following to your shell startup script: (`~/.zshenv` for `zs
 
 ### Install `forge-*` commands:
 
-    cd librewolf.git/generate
+    cd libreforge.git/generate
     pip install -r requirements.txt
     python setup.py develop
 
 ### Configure installation:
 
-Specify Xcode path in `generate/generate/server_tasks.py`:
-
-    xcode_version="/opt/xcode/13.0/Xcode.app"
-
 Link module directory:
 
-    cd librewolf.git
+    cd libreforge.git
     ln -s ../modules ./modules.local
 
-Create a new file: `librewolf.git/system_config.json`
+Create a new file: `libreforge.git/system_config.json`
 
     {
         "android_sdk_root": "/mnt/android-sdks",
         "android_sdk_dir": "/mnt/android-sdks/api-30",
         "module_urls": "https://s3.amazonaws.com/trigger-module-build/%s/%s.zip",
+        "xcode_version": "/Applications/Xcode.app"
     }
 
 Create or copy `local_config.json`:
 
-    cd librewolf.git
+    cd libreforge.git
     cp path/to/your/app/local_config.json path/to/libreforge.git/local_config.json
 
 
@@ -72,10 +69,20 @@ All commands have their own help, run with -h for details:
 
 ### `forge-generate`
 
-To build an app:
+To build an app, set the PLATFORM environment variable to one of:
 
     export PLATFORM=android
+    export PLATFORM=ios
+
+Then:
+
     export PROJECT=vanilla
+
+Remember to delete the target directories:
+
+    rm -rf ~/forge-workspace/$PROJECT/development
+
+Then build the app:
 
     forge-generate build -p -v --platforms $PLATFORM \
                    --config ~/forge-workspace/$PROJECT/src/config.json \
@@ -87,6 +94,9 @@ To build an app:
 
 To package an app:
 
+    rm -rf ~/forge-workspace/$PROJECT/development
+    rm -rf ~/forge-workspace/$PROJECT/release
+
     forge-generate build package -p -v --platforms $PLATFORM \
                    --config ~/forge-workspace/$PROJECT/src/config.json \
                    --usercode ~/forge-workspace/$PROJECT/src \
@@ -94,3 +104,8 @@ To package an app:
                    --override_modules modules.local \
                    --temp=/tmp/libreforge \
                    --output ~/forge-workspace/$PROJECT
+
+For iOS, if you are not logged into a local shell, you may also need to do a:
+
+    security -v unlock-keychain -p <password> /Library/Keychains/System.keychain
+    security -v unlock-keychain -p <password> ~/Library/Keychains/login.keychain-db

@@ -22,9 +22,6 @@ allprojects {
             url "https://maven.google.com"
         }
         maven {
-            url "http://dl.bintray.com/openid/net.openid"
-        }
-        maven {
             url "https://jitpack.io"
         }
         jcenter() // deprecated: https://blog.gradle.org/jcenter-shutdown
